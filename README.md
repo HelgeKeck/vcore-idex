@@ -6,6 +6,7 @@ This is a RatOS IDEX Implementation.
 - based on ratos alpha4 
 
 # Issues
+- no mirror or duplicatin mode yet
 - no initial configuration script to choose from, when installing ratos 
 - there is no autoupdate for the two toolboards
 - PI doesnt boot with both toolboards connected, need to boot with one and reconnect then the other one
