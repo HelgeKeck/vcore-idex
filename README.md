@@ -20,6 +20,7 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - Right toolhead must be the ```X``` toolhead
 - Name your toolboards ```toolboard``` and ```toolboardb```
 - Name your toolboard adxl ```adxl345 toolboard``` and ```adxl345 toolboardb```
+- Name your part cooling fans ```heater_fan toolhead_cooling_fan``` and ```heater_fan toolhead_cooling_fanb```
 - Put the z-probe to the right toolhead, it lets you probe the whole bed this way
 
 # RatOS
