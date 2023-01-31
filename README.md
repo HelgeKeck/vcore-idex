@@ -88,3 +88,9 @@ _LAYER_CHANGE
 ```ini
 _T T=[next_extruder] PRINTING=1
 ```
+
+# Oozeguards
+
+[STL](/oozeguard/)
+
+<img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/oozeguard.jpg" alt="" width="800"/>
