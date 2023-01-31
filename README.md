@@ -18,6 +18,7 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 # Hardware
 - Left toolhead must be the ```Dual Carriage``` toolhead
 - Right toolhead must be the ```X``` toolhead
+- Name your extruders ```extruder``` and ```extruder1```
 - Name your toolboards ```toolboard``` and ```toolboardb```
 - Name your toolboard adxl ```adxl345 toolboard``` and ```adxl345 toolboardb```
 - Name your part cooling fans ```heater_fan toolhead_cooling_fan``` and ```heater_fan toolhead_cooling_fanb```
