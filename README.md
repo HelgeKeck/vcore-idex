@@ -1,5 +1,17 @@
 # vcore-idex
-v-core idex config with octopus v1.1 and two EBB42 toolboards
+This is a RatOS IDEX Implementation.
+- all RatOS macros are idex friendly now, nclusinf homing, sensorless homing, input shaper generatrion, belt tension macros, ..... 
+- octopus v1.1 idex board configuration 
+- all hardware configs 
+- based on ratos alpha4 
+
+# Issues
+- no initial configuration script to choose from, when installing ratos 
+- there is no autoupdate for the two toolboards
+- PI doesnt boot with both toolboards connected, need to boot with one and reconnect then
+- secondary toolbaords needs to be flashed with a different name
+Left Toolboard serial number ```usb-Klipper_stm32g0b1xx_btt-ebb42-12-if00```
+Right Toolbaord serial number ```usb-Klipper_stm32g0b1xx_btt-ebb42-12b-if00```
 
 # Hardware
 - Left toolhead must be the ```Dual Carriage``` toolhead
