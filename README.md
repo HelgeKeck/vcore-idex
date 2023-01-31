@@ -2,8 +2,12 @@
 This is a temporary RatOS IDEX Implementation. It will be online until RatOS gets this feature 
 - all RatOS macros are idex friendly now, inclusive homing, sensorless homing, input shaper generation, belt tension macros, ..... 
 - octopus v1.1 idex board configuration 
-- all hardware configs 
-- based on ratos alpha4 
+- idex hardware configs 
+- based on ratos alpha4
+- heats up extruder on demand
+- can put extruder into standby mode 
+- works with or without purge tower
+...
 
 # V-Core IDEX Toolchange Video
 [![V-Core IDEX Toolchange](https://img.youtube.com/vi/vpZX4UYmQUg/maxresdefault.jpg)](https://youtu.be/vpZX4UYmQUg)
