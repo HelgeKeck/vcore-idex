@@ -23,6 +23,11 @@ v-core idex config with octopus v1.1 and two EBB42 toolboards
 
 # Input shaper
 
+- ```FREQUENCY START``` sets the start frequency
+- ```FREQUENCY END``` sets the start frequency
+- ```TOOLHEAD``` if empty = all toolheads, or ```0``` or ```1```
+- ```AXIS``` if empty = all axis, or ```X``` or ```Y```
+
 <img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/shaper.jpg" alt="" width="200"/>
 
 # Prusa Slicer / Super Slicer
