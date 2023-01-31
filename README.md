@@ -1,5 +1,5 @@
 # vcore-idex
-This is a temprary RatOS IDEX Implementation. It will be online until it is impemented into RatOS 
+This is a temporary RatOS IDEX Implementation. It will be online until it is impemented into RatOS 
 - all RatOS macros are idex friendly now, inclusive homing, sensorless homing, input shaper generation, belt tension macros, ..... 
 - octopus v1.1 idex board configuration 
 - all hardware configs 
