@@ -40,8 +40,9 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - ```Z HOP``` Z-Hop before parking
 - ```Z SPEED``` Z-Speed for the Z-Hop
 - ```RETRACT``` Retract in mm before Z-Hop
+- ```USE STANDBY``` Reduces the extruder temp if a toolhead is in parking mposition, 0=off, 1=on, dont change mid print
 
-<img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/parking.jpg" alt="" width="192"/>
+<img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/parking.jpg" alt="" width="196"/>
 
 # Preextrude config
 
