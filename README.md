@@ -5,6 +5,7 @@ This is a RatOS IDEX Implementation.
 - all hardware configs 
 - based on ratos alpha4 
 
+# V-Core IDEX Toolchange Video
 [![V-Core IDEX Toolchange](https://img.youtube.com/vi/vpZX4UYmQUg/maxresdefault.jpg)](https://youtu.be/vpZX4UYmQUg)
 
 # Issues
