@@ -20,5 +20,5 @@ _LAYER_CHANGE
 
 - Tool change G-Code
 ```ini
-T[next_extruder] PRINTING=1
+_T T=[next_extruder] PRINTING=1
 ```
