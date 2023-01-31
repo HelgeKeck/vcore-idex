@@ -16,10 +16,16 @@ v-core idex config with octopus v1.1 and two EBB42 toolboards
 
 - ```T0``` and ```T1``` changes the active toolhead
 - ```PARK TOOLHEAD``` to park the active toolhead
-- ```PARKING CONFIG``` to change the parameters of the parking procedure
-- ```PREEXTRUDE CONFIG``` to change the parameters of the preextrusion procedure
 
 <img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/toolhead_macros.jpg" alt="" width="441"/>
+
+# Parking config
+
+<img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/parking.jpg" alt="" width="192"/>
+
+# Preextrude config
+
+<img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/preextrude.jpg" alt="" width="194"/>
 
 # Input shaper
 
