@@ -12,7 +12,7 @@ v-core idex config with octopus v1.1 and two EBB42 toolboards
 - copy [ratos-variables.cfg](/klipper_config/ratos-variables.cfg) into your ```config``` folder
 - Enter the offsets from the secondary toolhead, that doesnt has the probe, into the ```ratos-variables.cfg``` file 
 
-# Toohead control
+# Toolhead control
 
 - ```T0``` and ```T1``` changes the active toolhead
 - ```PARK TOOLHEAD``` to park the active toolhead
