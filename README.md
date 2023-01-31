@@ -51,10 +51,10 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 # Preextrude config
 
 - ```EXTRUDE``` Extrude in mm before going back to the print job, enter ```0``` to deactivate this feature
-- ```RETRACT AFTER``` Retract in mm after ```EXTRUDE``` and before going back to the print job
+- ```RETRACT``` Retract in mm after ```EXTRUDE``` and before going back to the print job
 - ```FEEDRATE``` Feedrate for ```EXTRUDE``` and ```RETRACT AFTER``` 
 
-<img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/preextrude.jpg" alt="" width="194"/>
+<img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/preextrude.jpg" alt="" width="196"/>
 
 # Input shaper and Belt Tension Macros
 
@@ -63,7 +63,7 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - ```TOOLHEAD``` if empty = all toolheads, or ```0``` or ```1```
 - ```AXIS``` if empty = all axis, or ```X``` or ```Y```
 
-<img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/shaper.jpg" alt="" width="200"/>
+<img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/shaper.jpg" alt="" width="195"/>
 
 # Load / Unload Filament Macros
 
