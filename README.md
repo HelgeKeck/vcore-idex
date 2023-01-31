@@ -1,5 +1,15 @@
 # vcore-idex
-v-core idex config
+v-core idex config with octopus v1.1 and two EBB42 toolheads
+
+
+# Hardware
+- Left toolhead must be the dual carriage toolhead
+- Right toolhead must be the right toolhead
+- Name your toolboards ```toolboard``` and ```toolboardb```
+
+
+
+
 
 # Prusa Slicer / Super Slicer
 
