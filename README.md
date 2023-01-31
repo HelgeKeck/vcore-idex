@@ -43,7 +43,7 @@ This is a RatOS IDEX Implementation.
 
 # Preextrude config
 
-- ```EXTRUDE``` Extrude in mm before going back to the print job
+- ```EXTRUDE``` Extrude in mm before going back to the print job, enter ```0``` to deactivate this feature
 - ```RETRACT AFTER``` Retract in mm after ```EXTRUDE``` and before going back to the print job
 - ```FEEDRATE``` Feedrate for ```EXTRUDE``` and ```RETRACT AFTER``` 
 
