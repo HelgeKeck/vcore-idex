@@ -2,8 +2,8 @@
 v-core idex config with octopus v1.1 and two EBB42 toolboards
 
 # Hardware
-- Left toolhead must be the dual carriage toolhead
-- Right toolhead must be the right toolhead
+- Left toolhead must be the ```Dual Carriage``` toolhead
+- Right toolhead must be the ```X``` toolhead
 - Name your toolboards ```toolboard``` and ```toolboardb```
 - Name your toolboard adxl ```adxl345 toolboard``` and ```adxl345 toolboardb```
 - Put the z-probe to the right toolhead, it lets you probe the whole bed this way
