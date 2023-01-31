@@ -15,6 +15,7 @@ v-core idex config with octopus v1.1 and two EBB42 toolboards
 # Macros
 
 Toohead control
+
 <img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/toolhead_macros.jpg" alt="" width="441"/>
 
 # Prusa Slicer / Super Slicer
