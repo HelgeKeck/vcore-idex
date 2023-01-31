@@ -7,7 +7,6 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - heats up extruder on demand
 - can put extruder into standby mode 
 - works with or without purge tower
-- ...
 
 # V-Core IDEX Toolchange Video
 [![V-Core IDEX Toolchange](https://img.youtube.com/vi/vpZX4UYmQUg/maxresdefault.jpg)](https://youtu.be/vpZX4UYmQUg)
