@@ -2,6 +2,7 @@
 This is a temporary RatOS IDEX Implementation. It will be online until RatOS gets this feature 
 - all RatOS macros are idex friendly now, inclusive homing, sensorless homing, input shaper generation, belt tension macros, ..... 
 - octopus v1.1 idex board configuration 
+- dual EBB42 toolboard config 
 - idex hardware configs 
 - based on ratos alpha4
 - heats up extruder on demand
@@ -12,7 +13,7 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 [![V-Core IDEX Toolchange](https://img.youtube.com/vi/vpZX4UYmQUg/maxresdefault.jpg)](https://youtu.be/vpZX4UYmQUg)
 
 # Issues
-- no mirror or duplicatin mode yet
+- no mirror or duplication mode yet
 - no initial configuration script to choose from, when installing ratos 
 - there is no autoupdate for the two toolboards
 - PI doesnt boot with both toolboards connected, need to boot with one and reconnect then the other one
