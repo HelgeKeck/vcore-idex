@@ -5,7 +5,7 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - idex hardware configs 
 - based on ratos alpha4
 - heats up extruder on demand
-- can put extruder into standby mode 
+- can put extruders into standby mode 
 - works with or without purge tower
 
 # V-Core IDEX Toolchange Video
