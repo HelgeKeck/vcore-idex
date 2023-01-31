@@ -6,7 +6,7 @@ This is a RatOS IDEX Implementation.
 - based on ratos alpha4 
 
 <video src='https://youtu.be/vpZX4UYmQUg' width=640/>
-#
+
 # Issues
 - no mirror or duplicatin mode yet
 - no initial configuration script to choose from, when installing ratos 
