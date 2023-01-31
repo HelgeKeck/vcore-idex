@@ -1,6 +1,6 @@
 # vcore-idex
 This is a RatOS IDEX Implementation.
-- all RatOS macros are idex friendly now, inclusive homing, sensorless homing, input shaper generatrion, belt tension macros, ..... 
+- all RatOS macros are idex friendly now, inclusive homing, sensorless homing, input shaper generation, belt tension macros, ..... 
 - octopus v1.1 idex board configuration 
 - all hardware configs 
 - based on ratos alpha4 
@@ -45,7 +45,7 @@ This is a RatOS IDEX Implementation.
 
 <img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/preextrude.jpg" alt="" width="194"/>
 
-# Input shaper
+# Input shaper and Belt Tension Macros
 
 - ```FREQUENCY START``` sets the start frequency
 - ```FREQUENCY END``` sets the end frequency
@@ -54,7 +54,7 @@ This is a RatOS IDEX Implementation.
 
 <img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/shaper.jpg" alt="" width="200"/>
 
-# Load / Unload Filament
+# Load / Unload Filament Macros
 
 - ```T``` the toolhead for the loading/unloading process, ```-1``` all extruders simultaneously 
 - ```TEMP``` the temperature for the loading/unloading process
