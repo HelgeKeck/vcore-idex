@@ -19,11 +19,17 @@ v-core idex config with octopus v1.1 and two EBB42 toolboards
 
 <img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/toolhead_macros.jpg" alt="" width="441"/>
 
-# Parking config
+Parking config
+- ```Z HOP``` Z-Hop before parking
+- ```Z SPEED``` Z-Speed for the Z-Hop
+- ```RETRACT``` Retract in mm before Z-Hop
 
 <img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/parking.jpg" alt="" width="192"/>
 
-# Preextrude config
+Preextrude config
+- ```EXTRUDE``` Extrude in mm before going back to the print job
+- ```RETRACT AFTER``` Retract in mm after ```EXTRUDE``` and before going back to the print job
+- ```FEEDRATE``` Feedrate for ```EXTRUDE``` and ```RETRACT AFTER``` 
 
 <img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/preextrude.jpg" alt="" width="194"/>
 
