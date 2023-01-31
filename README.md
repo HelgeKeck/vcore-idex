@@ -12,11 +12,18 @@ v-core idex config with octopus v1.1 and two EBB42 toolboards
 - copy [ratos-variables.cfg](/klipper_config/ratos-variables.cfg) into your ```config``` folder
 - Enter the offsets from the secondary toolhead, that doesnt has the probe, into the ```ratos-variables.cfg``` file 
 
-# Macros
+# Toohead control
 
-Toohead control
+- ```T0``` and ```T1``` changes the active toolhead
+- ```PARK TOOLHEAD``` to park the active toolhead
+- ```PARKING CONFIG``` to change the parameters of the parking procedure
+- ```PREEXTRUDE CONFIG``` to change the parameters of the preextrusion procedure
 
 <img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/toolhead_macros.jpg" alt="" width="441"/>
+
+# Input shaper
+
+<img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/shaper.jpg" alt="" width="200"/>
 
 # Prusa Slicer / Super Slicer
 
