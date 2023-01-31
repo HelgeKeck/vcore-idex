@@ -1,6 +1,6 @@
 # vcore-idex
 This is a RatOS IDEX Implementation.
-- all RatOS macros are idex friendly now, nclusinf homing, sensorless homing, input shaper generatrion, belt tension macros, ..... 
+- all RatOS macros are idex friendly now, inclusive homing, sensorless homing, input shaper generatrion, belt tension macros, ..... 
 - octopus v1.1 idex board configuration 
 - all hardware configs 
 - based on ratos alpha4 
@@ -8,10 +8,8 @@ This is a RatOS IDEX Implementation.
 # Issues
 - no initial configuration script to choose from, when installing ratos 
 - there is no autoupdate for the two toolboards
-- PI doesnt boot with both toolboards connected, need to boot with one and reconnect then
-- secondary toolbaords needs to be flashed with a different name
-Left Toolboard serial number ```usb-Klipper_stm32g0b1xx_btt-ebb42-12-if00```
-Right Toolbaord serial number ```usb-Klipper_stm32g0b1xx_btt-ebb42-12b-if00```
+- PI doesnt boot with both toolboards connected, need to boot with one and reconnect then the other one
+- secondary toolboard needs to be flashed with a different name ```usb-Klipper_stm32g0b1xx_btt-ebb42-12b-if00``` instead of ```usb-Klipper_stm32g0b1xx_btt-ebb42-12-if00```
 
 # Hardware
 - Left toolhead must be the ```Dual Carriage``` toolhead
@@ -31,14 +29,16 @@ Right Toolbaord serial number ```usb-Klipper_stm32g0b1xx_btt-ebb42-12b-if00```
 
 <img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/toolhead_macros.jpg" alt="" width="441"/>
 
-Parking config
+# Parking config
+
 - ```Z HOP``` Z-Hop before parking
 - ```Z SPEED``` Z-Speed for the Z-Hop
 - ```RETRACT``` Retract in mm before Z-Hop
 
 <img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/parking.jpg" alt="" width="192"/>
 
-Preextrude config
+# Preextrude config
+
 - ```EXTRUDE``` Extrude in mm before going back to the print job
 - ```RETRACT AFTER``` Retract in mm after ```EXTRUDE``` and before going back to the print job
 - ```FEEDRATE``` Feedrate for ```EXTRUDE``` and ```RETRACT AFTER``` 
