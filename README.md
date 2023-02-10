@@ -16,7 +16,6 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - no mirror or duplication mode yet
 - no initial configuration script to choose from, when installing ratos 
 - there is no autoupdate for the two toolboards
-- PI doesnt boot with both toolboards connected, need to boot with one and reconnect then the other one
 - secondary toolboard needs to be flashed with a different name ```usb-Klipper_stm32g0b1xx_btt-ebb42-12b-if00``` instead of ```usb-Klipper_stm32g0b1xx_btt-ebb42-12-if00```
 
 # Hardware
