@@ -32,7 +32,7 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 
 # Load / Unload Filament Macros
 
-- ```T``` the toolhead for the loading/unloading process, ```-1``` all extruders simultaneously 
+- ```T``` the toolhead for the loading/unloading process
 - ```TEMP``` the temperature for the loading/unloading process
 
 # Prusa Slicer / Super Slicer
