@@ -47,7 +47,7 @@ T[next_extruder] P1
 ```
 
 - Post processing script. 
-Optional but recommended, it tells klipper if all toolheads are in use or not. The file is in this repo.
+Optional but recommended, tells klipper if all toolheads are in use.
 ```ini
 ENTER_YOUR_PATH_TO_PYTHON\python3.exe "ENTER_YOUR_PATH_TO_THE_FILE\postprocessor.py"
 ```
