@@ -68,3 +68,8 @@ Optional but recommended, it tells klipper if all toolheads are in use or not. T
 ```ini
 ENTER_YOUR_PATH_TO_PYTHON\python3.exe "ENTER_YOUR_PATH_TO_THE_FILE\postprocessor.py"
 ```
+
+# IDEX modes
+-by default the printer will be in single toolhead mode.
+-to enable the Copy or Mirror mode for the next print, home your printer and then execute the 'IDEX_COPY' or 'IDEX_MIRROR' GCODE macro.
+-execute 'IDEX_SINGLE' to switch back to normal mode.
