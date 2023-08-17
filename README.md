@@ -1,22 +1,11 @@
-# vcore-idex
-This is a temporary RatOS IDEX Implementation. It will be online until RatOS gets this feature 
-- all RatOS macros are idex friendly now, inclusive homing, sensorless homing, input shaper generation, belt tension macros, ..... 
+# vcore-idex For RatOS 2.02
+This is a temporary RatOS IDEX Implementation. It will be online until RatOS gets this feature
+USE IT AT YOUR OWN RISK! THIS IS NOT A TUTORIAL! 
+- RatOS macro compatibility 
 - octopus v1.1 idex board configuration 
-- dual EBB42 toolboard config 
-- idex hardware configs 
-- based on ratos alpha4
-- heats up extruder on demand
-- can put extruders into standby mode 
-- works with or without purge tower
-
-# V-Core IDEX Toolchange Video
-[![V-Core IDEX Toolchange](https://img.youtube.com/vi/vpZX4UYmQUg/maxresdefault.jpg)](https://youtu.be/vpZX4UYmQUg)
-
-# Issues
-- no mirror or duplication mode yet
-- no initial configuration script to choose from, when installing ratos 
-- there is no autoupdate for the two toolboards
-- secondary toolboard needs to be flashed with a different name ```usb-Klipper_stm32g0b1xx_btt-ebb42-12b-if00``` instead of ```usb-Klipper_stm32g0b1xx_btt-ebb42-12-if00```
+- dual EBB42 toolboards with autoflashing
+- native IDEX copy and mirror mode 
+- adaptive bed meshing for both toolheads
 
 # Hardware
 - Left toolhead must be the ```Dual Carriage``` toolhead
@@ -30,30 +19,8 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 # RatOS
 - copy [ratos-variables.cfg](/klipper_config/ratos-variables.cfg) into your ```config``` folder
 - Enter the offsets from the secondary toolhead, that doesnt has the probe, into the ```ratos-variables.cfg``` file 
-
-# Toolhead control
-
-- ```T0``` and ```T1``` changes the active toolhead
-- ```PARK TOOLHEAD``` to park the active toolhead
-
-<img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/toolhead_macros.jpg" alt="" width="441"/>
-
-# Parking config
-
-- ```Z HOP``` Z-Hop before parking
-- ```Z SPEED``` Z-Speed for the Z-Hop
-- ```RETRACT``` Retract in mm before Z-Hop
-- ```USE STANDBY``` Reduces the extruder temp if a toolhead is in parking mposition, 0=off, 1=on, dont change mid print
-
-<img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/parking.jpg" alt="" width="196"/>
-
-# Preextrude config
-
-- ```EXTRUDE``` Extrude in mm before going back to the print job, enter ```0``` to deactivate this feature
-- ```RETRACT``` Retract in mm after ```EXTRUDE``` and before going back to the print job
-- ```FEEDRATE``` Feedrate for ```EXTRUDE``` and ```RETRACT AFTER``` 
-
-<img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/preextrude.jpg" alt="" width="196"/>
+- copy [ratos-variables.cfg](/klipper_config/ratos-variables.cfg) into your ```config``` folder
+- copy the content of the RatOS board folder into your RatOS board folder
 
 # Input shaper and Belt Tension Macros
 
@@ -75,7 +42,7 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 
 - Start G-Code
 ```ini
-START_PRINT FIRST_LAYER_TEMP={first_layer_temperature} OTHER_LAYER_TEMP={temperature} BED_TEMP={first_layer_bed_temperature} INITIAL_TOOL={initial_tool} TOTAL_TOOLCHANGES={total_toolchanges} WIPE_TOWER={wipe_tower}
+START_PRINT EXTRUDER_TEMP={first_layer_temperature} BED_TEMP={first_layer_bed_temperature} X0={first_layer_print_min[0]} Y0={first_layer_print_min[1]} X1={first_layer_print_max[0]} Y1={first_layer_print_max[1]} EXTRUDER_OTHER_LAYER_TEMP={temperature} INITIAL_TOOL={initial_tool}
 ```
 
 - End G-Code
@@ -88,13 +55,15 @@ END_PRINT
 _LAYER_CHANGE
 ```
 
-- Tool change G-Code
+- Tool change G-Code. 
+Both lines are important
 ```ini
-_T T=[next_extruder] PRINTING=1
+;tool change post processor tag
+T[next_extruder] P1
 ```
 
-# Oozeguards
-
-[STL](/oozeguard/)
-
-<img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/oozeguard.jpg" alt="" width="800"/>
+- Post processing script. 
+Optional but recommended, it tells klipper if all toolheads are in use or not. The file is in this repo.
+```ini
+ENTER_YOUR_PATH_TO_PYTHON\python3.exe "ENTER_YOUR_PATH_TO_THE_FILE\postprocessor.py"
+```
