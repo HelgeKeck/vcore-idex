@@ -30,14 +30,10 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - ```TOOLHEAD``` if empty = all toolheads, or ```0``` or ```1```
 - ```AXIS``` if empty = all axis, or ```X``` or ```Y```
 
-<img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/shaper.jpg" alt="" width="195"/>
-
 # Load / Unload Filament Macros
 
 - ```T``` the toolhead for the loading/unloading process, ```-1``` all extruders simultaneously 
 - ```TEMP``` the temperature for the loading/unloading process
-
-<img src="https://github.com/HelgeKeck/vcore-idex/blob/main/img/load_filament.jpg" alt="" width="195"/>
 
 # Prusa Slicer / Super Slicer
 
