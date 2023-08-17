@@ -20,20 +20,7 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 # RatOS
 - copy [ratos-variables.cfg](/klipper_config/ratos-variables.cfg) into your ```config``` folder
 - Enter the offsets from the secondary toolhead, that doesnt has the probe, into the ```ratos-variables.cfg``` file 
-- copy [ratos-variables.cfg](/klipper_config/ratos-variables.cfg) into your ```config``` folder
 - copy the content of the RatOS board folder into your RatOS board folder
-
-# Input shaper and Belt Tension Macros
-
-- ```FREQUENCY START``` sets the start frequency
-- ```FREQUENCY END``` sets the end frequency
-- ```TOOLHEAD``` if empty = all toolheads, or ```0``` or ```1```
-- ```AXIS``` if empty = all axis, or ```X``` or ```Y```
-
-# Load / Unload Filament Macros
-
-- ```T``` the toolhead for the loading/unloading process
-- ```TEMP``` the temperature for the loading/unloading process
 
 # Prusa Slicer / Super Slicer
 
