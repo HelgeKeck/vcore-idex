@@ -17,6 +17,9 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - Name your part cooling fans ```heater_fan toolhead_cooling_fan``` and ```heater_fan toolhead_cooling_fanb```
 - Put the z-probe to the right toolhead, it lets you probe the whole bed this way
 
+# V-Core IDEX Toolchange Video
+[![V-Core IDEX Toolchange](https://img.youtube.com/vi/lKBVmPfxjEk/maxresdefault.jpg)](https://youtu.be/lKBVmPfxjEk)
+
 # RatOS
 - copy [ratos-variables.cfg](/klipper_config/ratos-variables.cfg) into your ```config``` folder
 - Enter the offsets from the secondary toolhead, that doesnt has the probe, into the ```ratos-variables.cfg``` file 
