@@ -7,6 +7,10 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - dual EBB42 toolboards with autoflashing
 - native IDEX copy and mirror mode 
 - adaptive bed meshing for both toolheads
+- ultra fast toolchanges
+
+# V-Core IDEX Toolchange Video
+[![V-Core IDEX Toolchange](https://img.youtube.com/vi/lKBVmPfxjEk/maxresdefault.jpg)](https://youtu.be/lKBVmPfxjEk)
 
 # Hardware
 - Left toolhead must be the ```Dual Carriage``` toolhead
@@ -16,9 +20,6 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - Name your toolboard adxl ```adxl345 toolboard``` and ```adxl345 toolboardb```
 - Name your part cooling fans ```heater_fan toolhead_cooling_fan``` and ```heater_fan toolhead_cooling_fanb```
 - Put the z-probe to the right toolhead, it lets you probe the whole bed this way
-
-# V-Core IDEX Toolchange Video
-[![V-Core IDEX Toolchange](https://img.youtube.com/vi/lKBVmPfxjEk/maxresdefault.jpg)](https://youtu.be/lKBVmPfxjEk)
 
 # RatOS
 - copy [ratos-variables.cfg](/klipper_config/ratos-variables.cfg) into your ```config``` folder
