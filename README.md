@@ -52,6 +52,12 @@ Optional but recommended, tells klipper if all toolheads are in use.
 ENTER_YOUR_PATH_TO_PYTHON\python3.exe "ENTER_YOUR_PATH_TO_THE_FILE\postprocessor.py"
 ```
 
+- Super fast tool changes post processing script. 
+EXPERIMENTAL, ultra fast and seamless IDEX toolchanges. 
+```ini
+ENTER_YOUR_PATH_TO_PYTHON\python3.exe "ENTER_YOUR_PATH_TO_THE_FILE\ftc.py"
+```
+
 # IDEX modes
 - by default the printer will be in single toolhead mode.
 - to enable the Copy or Mirror mode for the next print, home your printer and then execute the ```IDEX_COPY``` or ```IDEX_MIRROR``` GCODE macro.
