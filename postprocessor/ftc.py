@@ -57,12 +57,6 @@ def process_gcodefile(args, sourcefile):
     try:
         with open(sourcefile, "w", newline='\n', encoding='UTF-8') as writefile:
  
-            # tell the first toolchange not to swipe
-            for line in range(len(lines)):
-                if lines[line].rstrip().startswith("T0 P1") or lines[line].rstrip().startswith("T1 P1"):
-                    lines[line] = lines[line].rstrip() + ' S0\n'
-                    break
-
             # parse gcode
             for line in range(len(lines)):
                 if lines[line].rstrip().startswith("; custom gcode: end_filament_gcode"):
@@ -98,8 +92,8 @@ def process_gcodefile(args, sourcefile):
                     move_line = 0
                     if toolchange_line > 0:
                         for i2 in range(20):
-                            if lines[toolchange_line + i2].rstrip().startswith("G1 X"):
-                                splittedstring = lines[toolchange_line + i2].rstrip().split(" ")
+                            if lines[toolchange_line + i2].rstrip().replace("  ", " ").startswith("G1 X"):
+                                splittedstring = lines[toolchange_line + i2].rstrip().replace("  ", " ").split(" ")
                                 if splittedstring[1].startswith("X"):
                                     if splittedstring[2].startswith("Y"):
                                         move_x = splittedstring[1].rstrip()
@@ -142,8 +136,8 @@ def process_gcodefile(args, sourcefile):
                         new_toolchange_gcode = (lines[toolchange_line].rstrip() + ' ' + move_x + ' ' + move_y + ('' if zlift == 0 else ' Z' + str(zlift))).rstrip()
                         print('parameter added          ' + new_toolchange_gcode)
                         lines[toolchange_line] = new_toolchange_gcode + '\n'
-                        print('Horizontal move removed  ' + lines[move_line].rstrip())
-                        lines[move_line] = '; Removed by FTC ' + lines[move_line].rstrip() + '\n'
+                        print('Horizontal move removed  ' + lines[move_line].rstrip().replace("  ", " "))
+                        lines[move_line] = '; Removed by FTC ' + lines[move_line].rstrip().replace("  ", " ") + '\n'
 
                         if retraction_line > 0 and extrusion_line > 0:
                             print("Retraction move removed  " + lines[retraction_line].rstrip())
