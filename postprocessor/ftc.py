@@ -57,19 +57,32 @@ def process_gcodefile(args, sourcefile):
     try:
         with open(sourcefile, "w", newline='\n', encoding='UTF-8') as writefile:
  
+            tower_line = -1
+
             # parse gcode
             for line in range(len(lines)):
-                if lines[line].rstrip().startswith("; custom gcode: end_filament_gcode"):
+                if lines[line].rstrip().startswith(";tool change post processor tag"):
+
+                    # purge tower
+                    if tower_line == -1:
+                        tower_line = 0
+                        for i2 in range(20):
+                            if lines[line-i2].rstrip().startswith("; CP TOOLCHANGE START"):
+                                tower_line = line-i2
+                                break
 
                     # z-hop before toolchange
                     zhop = 0
                     zhop_line = 0
-                    if lines[line-1].rstrip().startswith("G1 Z"):
-                        split = lines[line-1].rstrip().split(" ")
-                        if split[1].startswith("Z"):
-                            zhop = float(split[1].replace("Z", ""))
-                            if zhop > 0.0:
-                                zhop_line = line-1
+                    if tower_line == 0:
+                        for i2 in range(20):
+                            if lines[line-i2].rstrip().startswith("; custom gcode: end_filament_gcode"):
+                                if lines[line-i2-1].rstrip().startswith("G1 Z"):
+                                    split = lines[line-i2-1].rstrip().split(" ")
+                                    if split[1].startswith("Z"):
+                                        zhop = float(split[1].replace("Z", ""))
+                                        if zhop > 0.0:
+                                            zhop_line = line-i2-1
 
                     # toolchange
                     toolchange_line = 0
@@ -80,7 +93,7 @@ def process_gcodefile(args, sourcefile):
 
                     # retraction after toolchange
                     retraction_line = 0
-                    if toolchange_line > 0:
+                    if tower_line == 0 and toolchange_line > 0:
                         for i2 in range(20):
                             if lines[toolchange_line + i2].rstrip().startswith("G1 E-"):
                                 retraction_line = toolchange_line + i2
@@ -104,7 +117,7 @@ def process_gcodefile(args, sourcefile):
                     # z-drop after toolchange
                     zdrop = 0
                     zdrop_line = 0
-                    if zhop_line > 0:
+                    if tower_line == 0 and zhop_line > 0:
                         if lines[move_line + 1].rstrip().startswith("G1 Z"):
                             split = lines[move_line + 1].rstrip().split(" ")
                             if split[1].startswith("Z"):
@@ -114,7 +127,7 @@ def process_gcodefile(args, sourcefile):
 
                     # extrusion after move
                     extrusion_line = 0
-                    if move_line > 0:
+                    if tower_line == 0 and move_line > 0:
                         for i2 in range(5):
                             if lines[move_line + i2].rstrip().startswith("G1 E"):
                                 extrusion_line = move_line + i2
@@ -122,7 +135,6 @@ def process_gcodefile(args, sourcefile):
 
                     # make changes
                     if toolchange_line > 0 and move_line > 0:
-                        
                         zlift = 0.0
                         if zhop_line > 0 and zdrop_line > 0 and zdrop_line > move_line and zhop > zdrop:
                             zlift = round(zhop - zdrop, 3)
@@ -146,6 +158,7 @@ def process_gcodefile(args, sourcefile):
                             lines[extrusion_line] = '; Removed by FTC ' + lines[extrusion_line].rstrip() + '\n'
 
                         print("\n")
+
             # write file
             for i, strline in enumerate(lines):
                 writefile.write(strline)
