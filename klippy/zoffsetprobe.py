@@ -21,6 +21,9 @@ class ZOffsetProbe:
         self.speed = config.getfloat('speed', 5.0, above=0.)
         self.lift_speed = config.getfloat('lift_speed', self.speed, above=0.)
         self.z_offset = config.getfloat('z_offset')
+        self.x_offset = config.getfloat('x_offset', 0)
+        self.y_offset = config.getfloat('y_offset', 0)
+
         self.multi_probe_pending = False
         self.last_state = False
         self.last_z_result = 0.
@@ -194,7 +197,10 @@ class ZOffsetProbe:
     def get_status(self, eventtime):
         return {'name': self.name,
                 'last_query': self.last_state,
-                'last_z_result': self.last_z_result}
+                'last_z_result': self.last_z_result,
+                'x_offset': self.x_offset,
+                'y_offset': self.y_offset,
+                'z_offset': self.z_offset}
     cmd_PROBE_ACCURACY_help = "Probe Z-height accuracy at current XY position"
     def cmd_PROBE_ACCURACY(self, gcmd):
         speed = gcmd.get_float("PROBE_SPEED", self.speed, above=0.)
