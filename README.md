@@ -71,7 +71,7 @@ is_system_service: False
 - *`X_ADJUST=1` to add 1 to the current x-offset*
 - *`X_ADJUST=-1` to subtract 1 from the current x-offset*
 
-# **NEW!** - Viusal assisted toolhead offset calibration
+# **NEW!** - Visual assisted toolhead offset calibration
 You can use a cheap raspberry PI 5MP camera to get easy, fast and perfect toolhead offsets. In seconds.
 - directly integrated into the mainsail user interface
 - ultra fast drag and drop XY-offset calibration
