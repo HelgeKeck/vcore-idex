@@ -28,7 +28,7 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 **3. copy the files**
 - copy the [custom](/klipper_config/custom) folder into ```~/printer_data/config```
 - copy the [ratos-variables.cfg](/klipper_config/ratos-variables.cfg) file into ```~/printer_data/config/```
-- copy the [btt-ebb42-12b](/klipper_config/RatOS/boards) folder into ```~/printer_data/config/RatOS/boards```
+- copy the [btt-ebb42-12b](/klipper_config/RatOS/boards/btt-ebb42-12b) folder into ```~/printer_data/config/RatOS/boards```
 
 **4. enable IDEX input shaper scripts**
 ```ini
