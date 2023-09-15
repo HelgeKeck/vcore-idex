@@ -20,11 +20,33 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - Name your toolboards ```toolboard``` and ```toolboardb```
 - Name your toolboard adxl ```adxl345 toolboard``` and ```adxl345 toolboardb```
 - Name your part cooling fans ```heater_fan toolhead_cooling_fan``` and ```heater_fan toolhead_cooling_fanb```
-- Put the z-probe to the right toolhead, it lets you probe the whole bed this way
+- The z-probe MUST be on to the right toolhead
+
+# Toolhead Offsets
+- copy [ratos-variables.cfg](/klipper_config/ratos-variables.cfg) into your ```config``` folder
+- Enter the offsets from the left toolhead 
+
+Only change this variables!
+```
+[Variables]
+yoffset = 0.0
+xoffset = 0.0
+zoffset = 0.0
+```
+
+Do not touch this ones!
+```
+[Variables]
+applied_offset = 1
+xcontrolpoint = 100.0
+ycontrolpoint = 100.0
+zcontrolpoint = 100.0
+zoffsetcontrolpoint = 100.0
+```
+
+
 
 # RatOS
-- copy [ratos-variables.cfg](/klipper_config/ratos-variables.cfg) into your ```config``` folder
-- Enter the offsets from the secondary toolhead, that doesnt has the probe, into the ```ratos-variables.cfg``` file 
 - copy the content of the RatOS board folder into your RatOS board folder
 
 # Prusa Slicer / Super Slicer
