@@ -46,7 +46,10 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - use `X=1` to set the x-offset to 1
 - use `X_ADJUST=1` to add 1 the current x-offset
 
-
+# IDEX modes
+- by default the printer will be in single toolhead mode.
+- to enable the Copy or Mirror mode for the next print, home your printer and then execute the ```IDEX_COPY``` or ```IDEX_MIRROR``` GCODE macro.
+- execute ```IDEX_SINGLE``` to switch back to normal mode.
 # Prusa Slicer / Super Slicer
 
 - Start G-Code
@@ -82,8 +85,3 @@ EXPERIMENTAL, ultra fast and seamless IDEX toolchanges.
 ```ini
 ENTER_YOUR_PATH_TO_PYTHON\python3.exe "ENTER_YOUR_PATH_TO_THE_FILE\ftc.py"
 ```
-
-# IDEX modes
-- by default the printer will be in single toolhead mode.
-- to enable the Copy or Mirror mode for the next print, home your printer and then execute the ```IDEX_COPY``` or ```IDEX_MIRROR``` GCODE macro.
-- execute ```IDEX_SINGLE``` to switch back to normal mode.
