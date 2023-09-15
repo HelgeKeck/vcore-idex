@@ -73,7 +73,7 @@ is_system_service: False
 # **NEW!** - Viusal assisted toolhead offset calibration
 You can use a cheap raspberry PI 5MP camera to get easy, fast and perfect toolhead offsets. In seconds.
 - directly integrated into the mainsail user interface
-- ultra fast drag and drop nozzle XY-offset calibration
+- ultra fast drag and drop XY-offset calibration
 - manual XY-offset calibration through the mainsail navigation buttons
 - manual Z-offset calibration based on camera focus, sub 0.1mm accuracy
 - one click auto z-offset calibration with a optional microswitch, 0.00Xmm accuracy  
