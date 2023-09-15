@@ -30,28 +30,18 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 
 <img src="gfx/ebb42_autoflash.jpg" alt="" width="480"/>
 
+# IDEX G-Code Macros
+<img src="gfx/macros.jpg" alt="" width="480"/>
+
 # Toolhead Offsets
-- copy [ratos-variables.cfg](/klipper_config/ratos-variables.cfg) into your ```config``` folder on your raspberry PI
-- Enter the offsets from the left toolhead
+- copy the [ratos-variables.cfg](/klipper_config/ratos-variables.cfg) file into the ```~/printer_data/config/``` folder on your raspberry PI
 - restart klipper
+- use the `calibrate_separation` macro to print the calibration lines, heat up your extruders beforehand
+- use the `SET_SEPARATION` macro to enter your toolhead offsets from the left toolhead
+<img src="gfx/set_separation.jpg" alt="" width="480"/>
+- `X=1` sets the x-offset to 1
+- `X_ADJUST=1` adds 1 the current x-offset
 
-Only change this!
-```
-[Variables]
-yoffset = 0.0
-xoffset = 0.0
-zoffset = 0.0
-```
-
-Do not touch this!
-```
-[Variables]
-applied_offset = 1
-xcontrolpoint = 100.0
-ycontrolpoint = 100.0
-zcontrolpoint = 100.0
-zoffsetcontrolpoint = 100.0
-```
 
 # Prusa Slicer / Super Slicer
 
