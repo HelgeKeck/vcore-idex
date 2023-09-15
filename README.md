@@ -77,39 +77,14 @@ You can use a cheap raspberry PI 5MP camera to get easy, fast and perfect toolhe
 - ultra fast drag and drop XY-offset calibration
 - manual XY-offset calibration through the mainsail navigation buttons
 - manual Z-offset calibration based on camera focus, sub 0.1mm accuracy
-- one click auto z-offset calibration with a optional microswitch, 0.00Xmm accuracy  
+- one click auto z-offset calibration with a optional switch, 0.00Xmm accuracy  
 - control a camera LED directly through the interface
 - [mainsail fork with built in visual assisted offset calibration support](https://github.com/HelgeKeck/mainsail/tree/nozzle-offset-calibration)
 - [watch the drag and drop XY-Offset calibration video](https://youtu.be/3SWbWAmu-hM)
 - [watch the automatic Z-Offset probe calibration video](https://youtu.be/InJN57BFA_c)
+- [read more](doc/vaoc.md)
 
 <img src="gfx/nozzle_calibration2.jpg" alt="" width="480"/>
-
-Example camera LED config
-```ini
-[neopixel nozzle_calibration_led]
-pin: PE15
-chain_count: 4
-color_order: GRB
-initial_RED: 0.0
-initial_GREEN: 0.0
-```
-
-Example z-offset probe config
-```ini
-[zoffsetprobe]
-pin: ^!PE7                      # probe trigger pin
-z_offset: 22.0                  # probe height, used to limit the probe z-move
-y_offset: 22.5                  # probe y-offset, measured from the camera center
-x_offset: 0                     # probe x-offset, measured from the camera center
-speed: 10                       
-samples: 3                      
-sample_retract_dist: 5
-lift_speed: 10.0
-samples_result: median
-samples_tolerance: 0.2
-samples_tolerance_retries: 5
-```
 
 # Prusa Slicer / Super Slicer
 
