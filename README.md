@@ -8,6 +8,7 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - **NEW!** - ultra fast toolchanges, up to 0.3 seconds
 - **NEW!** - support for visual assisted toolhead offset calibration
 - **NEW!** - built in z-offset probe support
+- **NEW!** - [better oozeguards](oozeguard)
 
 # V-Core IDEX toolchange video
 [![V-Core IDEX Toolchange](https://img.youtube.com/vi/lKBVmPfxjEk/maxresdefault.jpg)](https://youtu.be/lKBVmPfxjEk)
