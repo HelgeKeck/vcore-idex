@@ -72,17 +72,9 @@ is_system_service: False
 - *`X_ADJUST=-1` to subtract 1 from the current x-offset*
 
 # **NEW!** - Visual assisted toolhead offset calibration
-You can use a cheap raspberry PI 5MP camera to get easy, fast and perfect toolhead offsets. In seconds.
-- directly integrated into the mainsail user interface
-- ultra fast drag and drop XY-offset calibration
-- manual XY-offset calibration through the mainsail navigation buttons
-- manual Z-offset calibration based on camera focus, sub 0.1mm accuracy
-- one click auto z-offset calibration with a optional switch, 0.00Xmm accuracy  
-- control a camera LED directly through the interface
-- [mainsail fork with built in visual assisted offset calibration support](https://github.com/HelgeKeck/mainsail/tree/nozzle-offset-calibration)
-- [watch the drag and drop XY-Offset calibration video](https://youtu.be/3SWbWAmu-hM)
-- [watch the automatic Z-Offset probe calibration video](https://youtu.be/InJN57BFA_c)
-- [read more](doc/vaoc.md)
+Use a cheap camera, like a raspi 5MP, to get easy, fast and perfect toolhead offsets. In seconds.
+
+[read more](doc/vaoc.md)
 
 <img src="gfx/nozzle_calibration2.jpg" alt="" width="480"/>
 
