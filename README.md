@@ -24,9 +24,10 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 
 # Toolhead Offsets
 - copy [ratos-variables.cfg](/klipper_config/ratos-variables.cfg) into your ```config``` folder
-- Enter the offsets from the left toolhead 
+- Enter the offsets from the left toolhead in the file
+- restart klipper
 
-Only change this variables!
+Only change this!
 ```
 [Variables]
 yoffset = 0.0
@@ -34,7 +35,7 @@ xoffset = 0.0
 zoffset = 0.0
 ```
 
-Do not touch this ones!
+Do not touch this!
 ```
 [Variables]
 applied_offset = 1
@@ -44,10 +45,10 @@ zcontrolpoint = 100.0
 zoffsetcontrolpoint = 100.0
 ```
 
-
-
-# RatOS
+# Secondary EBB42 Toolboard autoflashing
 - copy the content of the RatOS board folder into your RatOS board folder
+- ssh into the PI and run `sudo ~/printer_data/config/RatOS/scripts/ratos-update.sh`
+- restart PI
 
 # Prusa Slicer / Super Slicer
 
