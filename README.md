@@ -36,6 +36,7 @@ type: git_repo
 primary_branch: main
 path: ~/vcore-idex
 origin: https://github.com/HelgeKeck/vcore-idex.git
+is_system_service: False
 ```
 - reboot, not your laptop
 - always after updating the repo run `chmod 750 ~/printer_data/config/custom/scripts/*.sh`
