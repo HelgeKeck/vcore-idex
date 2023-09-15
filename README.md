@@ -38,9 +38,11 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - restart klipper
 - use the `calibrate_separation` macro to print the calibration lines, heat up your extruders beforehand
 - use the `SET_SEPARATION` macro to enter your toolhead offsets from the left toolhead
+
 <img src="gfx/set_separation.jpg" alt="" width="480"/>
-- `X=1` sets the x-offset to 1
-- `X_ADJUST=1` adds 1 the current x-offset
+
+- use `X=1` to set the x-offset to 1
+- use `X_ADJUST=1` to add 1 the current x-offset
 
 
 # Prusa Slicer / Super Slicer
