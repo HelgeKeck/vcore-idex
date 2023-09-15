@@ -23,9 +23,13 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - The z-probe MUST be on to the right toolhead
 
 # Secondary EBB42 Toolboard autoflashing
-- copy the content of the RatOS board folder into your RatOS board folder
+- copy the EBB42 folder into your raspberry PI RatOS board folder
+- copy [btt-ebb42-12b](/klipper_config/RatOS/boards) into the ```RatOS/boards``` folder on your raspberry PI
 - ssh into the PI and run `sudo ~/printer_data/config/RatOS/scripts/ratos-update.sh`
 - restart PI
+
+https://github.com/HelgeKeck/vcore-idex/tree/main/klipper_config/RatOS/boards
+
 
 <img src="https://github.com/HelgeKeck/vcore-idex/blob/main/gfx/ebb42_autoflash.jpg" alt="" width="480"/>
 
