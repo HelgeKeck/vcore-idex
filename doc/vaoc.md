@@ -79,7 +79,7 @@ change the `Pixel perMM` value until the small circle fills the nozzle hole. Mak
 
 <img src="../gfx/vaoc3.jpg" alt="" width="320"/>
 
-This will save the current coordinates and uses them as the reference point. Every time you activate the primary toolhead, through the VAOC interface, i will move to this position 
+This will save the current coordinates and uses them as the reference point. Every time you activate the primary toolhead, through the VAOC interface, it will move to this position 
 
 **6.** after you press `set`, and if you have a z-offset probe configured, the red `Z-PROBE` button will apear. Press it to probe the primary toolhead and to store the reference z-offset point.  
 
