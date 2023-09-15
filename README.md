@@ -38,7 +38,7 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - do not touch the content of the file!
 - restart klipper
 - make sure your left toolhead z-offset is not negative, means it should not be lower then the nozzle from the right toolhead
-- for the X and Y calibration use the `calibrate_separation` macro to print the calibration lines, You are responsible for heating up your bed and extruders, dont forget to z-tilt and the bed mesh
+- for the X and Y calibration use the `calibrate_separation` macro to print the calibration lines, you are responsible for heating up your bed and extruders, dont forget to z-tilt and the bed mesh
 - use the `SET_SEPARATION` macro to enter your toolhead offsets from the left toolhead
 
 <img src="gfx/set_separation.jpg" alt="" width="320"/>
