@@ -32,37 +32,6 @@ zcontrolpoint = 100.0
 zoffsetcontrolpoint = 100.0
 ```
 
-# Camera LED configuration
-This is optional but recommended. VAOC enables the LED feature if it detects a LED with the name `nozzle_calibration_led`.
-```ini
-[neopixel nozzle_calibration_led]
-pin: PE15
-chain_count: 4
-color_order: GRB
-initial_RED: 0.0
-initial_GREEN: 0.0
-```
-
-# Z-Offset Probe configuration
-This is optional but recommended. VAOC enables the z-offset probe feature if it detects the configured `zoffsetprobe` object.
-
-The Z-Offset probe works exactly like a Super Pinda does, with all sanity checks, safety features and g-code commands like `Z_OFFSET_PROBE`, `Z_OFFSET_QUERY_PROBE` and `Z_OFFSET_PROBE_ACCURACY` . It is the same code base with just a few changes.
-
-```ini
-[zoffsetprobe]
-pin: ^!PE7                      # probe trigger pin
-z_offset: 22.0                  # probe height, used to limit the probe z-move
-y_offset: 22.5                  # probe y-offset, measured from the camera center
-x_offset: 0                     # probe x-offset, measured from the camera center
-speed: 10                       
-samples: 3                      
-sample_retract_dist: 5
-lift_speed: 10.0
-samples_result: median
-samples_tolerance: 0.2
-samples_tolerance_retries: 5
-```
-
 # Install the VAOC Mainsail fork
 clone the repo
 
@@ -92,6 +61,37 @@ update repo
 ```ini
 cd ~/mainsail-source
 git pull
+```
+
+# Camera LED configuration
+This is optional but recommended. VAOC enables the LED feature if it detects a LED with the name `nozzle_calibration_led`.
+```ini
+[neopixel nozzle_calibration_led]
+pin: PE15
+chain_count: 4
+color_order: GRB
+initial_RED: 0.0
+initial_GREEN: 0.0
+```
+
+# Z-Offset Probe configuration
+This is optional but recommended. VAOC enables the z-offset probe feature if it detects the configured `zoffsetprobe` object.
+
+The Z-Offset probe works exactly like a Super Pinda does, with all sanity checks, safety features and g-code commands like `Z_OFFSET_PROBE`, `Z_OFFSET_QUERY_PROBE` and `Z_OFFSET_PROBE_ACCURACY` . It is the same code base with just a few changes.
+
+```ini
+[zoffsetprobe]
+pin: ^!PE7                      # probe trigger pin
+z_offset: 22.0                  # probe height, used to limit the probe z-move
+y_offset: 22.5                  # probe y-offset, measured from the camera center
+x_offset: 0                     # probe x-offset, measured from the camera center
+speed: 10                       
+samples: 3                      
+sample_retract_dist: 5
+lift_speed: 10.0
+samples_result: median
+samples_tolerance: 0.2
+samples_tolerance_retries: 5
 ```
 
 # Activate the webcam overlay
