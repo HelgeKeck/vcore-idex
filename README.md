@@ -37,7 +37,8 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - copy the [ratos-variables.cfg](/klipper_config/ratos-variables.cfg) file into the ```~/printer_data/config/``` folder on your raspberry PI
 - do not touch the content of the file!
 - restart klipper
-- use the `calibrate_separation` macro to print the calibration lines, heat up your extruders beforehand
+- make sure your left toolhead z-offset is not negative, means it should not be lower then the nozzle from the right toolhead
+- for the X and Y calibration use the `calibrate_separation` macro to print the calibration lines, You are responsible for heating up your bed and extruders, dont forget to z-tilt and the bed mesh
 - use the `SET_SEPARATION` macro to enter your toolhead offsets from the left toolhead
 
 <img src="gfx/set_separation.jpg" alt="" width="320"/>
