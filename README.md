@@ -39,7 +39,11 @@ origin: https://github.com/HelgeKeck/vcore-idex.git
 is_system_service: False
 ```
 - reboot, not your laptop
-- always after updating the repo run `chmod 750 ~/printer_data/config/custom/scripts/*.sh`
+- always after updating the repo run 
+```ini
+chmod 750 ~/printer_data/config/custom/scripts/*.sh
+chmod 750 ~/printer_data/config/RatOS/boards/btt-ebb42-12b/*.sh
+```
 
 # Manual toolhead offset calibration
 - for the X and Y calibration use the `calibrate_separation` macro to print the calibration lines, you are responsible for heating up your bed and extruders, dont forget to z-tilt and the bed mesh
