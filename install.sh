@@ -73,21 +73,6 @@ function copy_example_cfg {
     fi
 }
 
-function prepare_is_scripts {
-    if [ -d "${CONFIG_DIR}" ]; then
-        if [ -d "${CONFIG_DIR}/custom/scripts" ]; then
-            chmod 750 ~/printer_data/config/custom/scripts/*.sh
-            echo -e "is scripts ready"
-        else
-            echo -e "ERROR: ${CONFIG_DIR}/custom/scripts not found."
-            exit 1
-        fi
-    else
-        echo -e "ERROR: ${CONFIG_DIR} not found."
-        exit 1
-    fi
-}
-
 function update_udev_rules {
     if [ -d "${CONFIG_DIR}" ]; then
         sudo ~/printer_data/config/RatOS/scripts/ratos-update.sh
@@ -104,7 +89,6 @@ link_custom_folder
 copy_variables_file
 copy_board_files
 copy_example_cfg
-prepare_is_scripts
 update_udev_rules
 start_klipper
 echo -e ""
