@@ -10,9 +10,6 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 # V-Core IDEX Toolchange Video
 [![V-Core IDEX Toolchange](https://img.youtube.com/vi/lKBVmPfxjEk/maxresdefault.jpg)](https://youtu.be/lKBVmPfxjEk)
 
-# USE IT AT YOUR OWN RISK!
-- contains experimental code
-
 # Hardware
 - Left toolhead must be the ```Dual Carriage``` toolhead
 - Right toolhead must be the ```X``` toolhead
@@ -45,6 +42,19 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 
 - use `X=1` to set the x-offset to 1
 - use `X_ADJUST=1` to add 1 the current x-offset
+
+# Toolchange Configuration
+- `ZHOP` Z-Hop before and after the toolchange, in addition to the slicer z-hop 
+- `COMBINED_ZHOP` 0=OFF 1=ON. Combines z-hop/z-drop with retraction/deretraction moves
+- `M400` 0=OFF 1=ON. Turn M400, for the z-hops and z-drops, on or off
+- `RETRACT` Retraction before the toolchange
+- `EXTRUDE` Extrusion after the toolchange
+- `FEEDRATE` Feedrate for retract/extrude
+- `SPEED` XY Travel Speed
+- `ACCEL` XY Travel Accel
+- `SYNC_FANS` 0=OFF 1=ON. Forces fan synchronisation in single mode
+
+<img src="gfx/toolchange.jpg" alt="" width="320"/>
 
 # IDEX modes
 - by default the printer will be in single toolhead mode.
