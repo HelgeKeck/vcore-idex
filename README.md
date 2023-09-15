@@ -31,15 +31,16 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 <img src="gfx/ebb42_autoflash.jpg" alt="" width="480"/>
 
 # IDEX G-Code Macros
-<img src="gfx/macros.jpg" alt="" width="480"/>
+<img src="gfx/macros.jpg" alt="" width="320"/>
 
 # Toolhead Offsets
 - copy the [ratos-variables.cfg](/klipper_config/ratos-variables.cfg) file into the ```~/printer_data/config/``` folder on your raspberry PI
+- do not touch the content of the file!
 - restart klipper
 - use the `calibrate_separation` macro to print the calibration lines, heat up your extruders beforehand
 - use the `SET_SEPARATION` macro to enter your toolhead offsets from the left toolhead
 
-<img src="gfx/set_separation.jpg" alt="" width="480"/>
+<img src="gfx/set_separation.jpg" alt="" width="320"/>
 
 - use `X=1` to set the x-offset to 1
 - use `X_ADJUST=1` to add 1 the current x-offset
