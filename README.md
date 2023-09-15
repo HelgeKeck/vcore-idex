@@ -24,7 +24,7 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 
 # Toolhead Offsets
 - copy [ratos-variables.cfg](/klipper_config/ratos-variables.cfg) into your ```config``` folder
-- Enter the offsets from the left toolhead in the file
+- Enter the offsets from the left toolhead
 - restart klipper
 
 Only change this!
