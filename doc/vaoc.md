@@ -9,7 +9,6 @@ Use a cheap camera, like a raspi 5MP, to get easy, fast and perfect toolhead off
 - one click auto z-offset calibration with a optional switch, 0.00Xmm accuracy  
 - control a camera LED directly through the interface
 - supports the new ultra fast toolchanges, switch between toolheads in a blink of an eye
-- [mainsail fork with built in visual assisted offset calibration support](https://github.com/HelgeKeck/mainsail/tree/nozzle-offset-calibration)
 - [watch the drag and drop XY-Offset calibration video](https://youtu.be/3SWbWAmu-hM)
 - [watch the automatic Z-Offset probe calibration video](https://youtu.be/InJN57BFA_c)
 - [watch the ultra fast toolchange video](https://youtu.be/YhUzwRg1qpU)
@@ -17,6 +16,7 @@ Use a cheap camera, like a raspi 5MP, to get easy, fast and perfect toolhead off
 <img src="../gfx/nozzle_calibration2.jpg" alt="" width="480"/>
 
 # Requirements
+- instead of the public mainsail release, use this [fork](https://github.com/HelgeKeck/mainsail/tree/nozzle-offset-calibration) instead
 - Adaptive MJPEG-Streamer camera, i recommend the raspberry PI 5MP camera.
 - set the camera to its highest resolution
 - The [ratos-variables.cfg](../klipper_config/ratos-variables.cfg) in your config folder and these variable names.
@@ -61,6 +61,37 @@ lift_speed: 10.0
 samples_result: median
 samples_tolerance: 0.2
 samples_tolerance_retries: 5
+```
+
+# Install the VAOC Mainsail fork
+clone the repo
+
+```ini
+cd ~
+git clone https://github.com/HelgeKeck/mainsail.git mainsail-source
+cd ~/mainsail-source
+npm install
+git checkout nozzle-offset-calibration
+```
+
+build distribution
+
+```ini
+cd ~/mainsail-source
+npm run build
+```
+
+deploy distribution
+
+```ini
+sudo cp -av ~/mainsail-source/dist/* ~/mainsail
+```
+
+update repo
+
+```ini
+cd ~/mainsail-source
+git pull
 ```
 
 # Activate the webcam overlay
