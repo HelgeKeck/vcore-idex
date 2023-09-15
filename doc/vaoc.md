@@ -62,7 +62,7 @@ samples_tolerance_retries: 5
 <img src="../gfx/vaoc1.jpg" alt="" width="480"/>
 
 # Calibrate Pixel per MM value
-change the `Pixel perMM` value until the small circle fills the nozzle hole. Make sure the nozzle tip is in focus
+change the `Pixel per MM` value until the small circle fills the nozzle hole. Make sure the nozzle tip is in focus
 
 <img src="../gfx/vaoc2.jpg" alt="" width="320"/>
 
