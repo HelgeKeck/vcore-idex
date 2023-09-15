@@ -1,7 +1,7 @@
 # **VAOC** - *Visual Assisted Offset Calibration*
 Use a cheap camera, like a raspi 5MP, to get easy, fast and perfect toolhead offsets. In seconds.
 - full RatOS 2.X compatibility
-- [macros](../klipper_config/custom/macros/nozzle_calibration.cfg) can easily be changed to work with toolchanger or other non RatOS printers
+- [macros](../klipper_config/custom/macros/nozzle_calibration.cfg#L94) can easily be changed to work with toolchanger or other non RatOS printers
 - directly integrated into the mainsail user interface
 - ultra fast drag and drop XY-offset calibration
 - manual XY-offset calibration through the mainsail navigation buttons
