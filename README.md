@@ -50,6 +50,8 @@ zoffsetcontrolpoint = 100.0
 - ssh into the PI and run `sudo ~/printer_data/config/RatOS/scripts/ratos-update.sh`
 - restart PI
 
+<img src="https://github.com/HelgeKeck/vcore-idex/blob/main/gfx/ebb42_autoflash.jpg" alt="" width="640"/>
+
 # Prusa Slicer / Super Slicer
 
 - Start G-Code
