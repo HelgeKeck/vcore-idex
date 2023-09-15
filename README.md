@@ -22,19 +22,16 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - Name your part cooling fans ```heater_fan toolhead_cooling_fan``` and ```heater_fan toolhead_cooling_fanb```
 - The z-probe MUST be on to the right toolhead
 
-# Secondary EBB42 Toolboard autoflashing
-- copy the EBB42 folder into your raspberry PI RatOS board folder
-- copy [btt-ebb42-12b](/klipper_config/RatOS/boards) into the ```RatOS/boards``` folder on your raspberry PI
+# Secondary BTT EBB42 V1.2 autoflashing
+- copy the [btt-ebb42-12b](/klipper_config/RatOS/boards) folder into the ```~/printer_data/config/RatOS/boards``` folder on your raspberry PI
 - ssh into the PI and run `sudo ~/printer_data/config/RatOS/scripts/ratos-update.sh`
-- restart PI
+- restart the PI
+- you can now flash and autoflash the secondary toolboard
 
-https://github.com/HelgeKeck/vcore-idex/tree/main/klipper_config/RatOS/boards
-
-
-<img src="https://github.com/HelgeKeck/vcore-idex/blob/main/gfx/ebb42_autoflash.jpg" alt="" width="480"/>
+<img src="gfx/ebb42_autoflash.jpg" alt="" width="480"/>
 
 # Toolhead Offsets
-- copy [ratos-variables.cfg](/klipper_config/ratos-variables.cfg) into your ```config``` folder
+- copy [ratos-variables.cfg](/klipper_config/ratos-variables.cfg) into your ```config``` folder on your raspberry PI
 - Enter the offsets from the left toolhead
 - restart klipper
 
