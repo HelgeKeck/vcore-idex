@@ -5,7 +5,7 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - dual EBB42 toolboards with autoflashing
 - native IDEX copy and mirror mode 
 - adaptive bed meshing for both toolheads
-- **NEW!** - ultra fast toolchanges
+- **NEW!** - ultra fast toolchanges, up to 0.3 seconds
 - **NEW!** - support for visual assisted toolhead offset calibration
 - **NEW!** - built in z-offset probe support
 
