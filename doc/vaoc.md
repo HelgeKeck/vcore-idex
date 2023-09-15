@@ -6,9 +6,11 @@ Use a cheap camera, like a raspi 5MP, to get easy, fast and perfect toolhead off
 - manual Z-offset calibration based on camera focus, sub 0.1mm accuracy
 - one click auto z-offset calibration with a optional switch, 0.00Xmm accuracy  
 - control a camera LED directly through the interface
+- supports the new ultra fast toolchanges, switch between toolheads in a blink of an eye
 - [mainsail fork with built in visual assisted offset calibration support](https://github.com/HelgeKeck/mainsail/tree/nozzle-offset-calibration)
 - [watch the drag and drop XY-Offset calibration video](https://youtu.be/3SWbWAmu-hM)
 - [watch the automatic Z-Offset probe calibration video](https://youtu.be/InJN57BFA_c)
+- [watch the ultra fast toolchange video](https://youtu.be/YhUzwRg1qpU)
 
 <img src="../gfx/nozzle_calibration2.jpg" alt="" width="480"/>
 
