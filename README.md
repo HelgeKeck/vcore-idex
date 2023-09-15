@@ -42,6 +42,9 @@ sudo ~/printer_data/config/RatOS/scripts/ratos-update.sh
 
 **6. restart the pi**
 
+**7. configure your printer.cfg**
+- use the example [IDEX printer.cfg](/klipper_config/printer.cfg) 
+
 # Manual toolhead offset calibration
 - for the X and Y calibration use the `calibrate_separation` macro to print the calibration lines, you are responsible for heating up your bed and extruders, dont forget to z-tilt and the bed mesh
 - use the `SET_SEPARATION` macro to enter your toolhead offsets from the left toolhead
