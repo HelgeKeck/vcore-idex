@@ -21,22 +21,23 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - make sure the left nozzle is **NOT** lower then the right nozzle, ideally they have the same z-offset
 
 # Install RatOS IDEX
-**1. install RatOS for V-Core 3**
-
-**2. update klipper**
-
-**3. copy the files**
-- copy the [custom](/klipper_config/custom) folder into ```~/printer_data/config```
-- copy the [printer.cfg](/klipper_config/printer.cfg) file into ```~/printer_data/config/```
-- copy the [ratos-variables.cfg](/klipper_config/ratos-variables.cfg) file into ```~/printer_data/config/```
-- copy the [btt-ebb42-12b](/klipper_config/RatOS/boards) folder into ```~/printer_data/config/RatOS/boards```
-
-**4. SSH into the pi and run**
-```ini
-chmod 750 ~/printer_data/config/custom/scripts/*.sh
-sudo ~/printer_data/config/RatOS/scripts/ratos-update.sh
-sudo reboot
+- install RatOS for V-Core 3
+- update klipper
+- clone the idex repo
 ```
+cd ~/
+git clone https://github.com/HelgeKeck/vcore-idex.git
+bash ~/vcore-idex/install.sh
+```
+- update moonraker.conf
+```ini
+[update_manager IDEX]
+type: git_repo
+primary_branch: main
+path: ~/vcore-idex
+origin: https://github.com/HelgeKeck/vcore-idex.git
+```
+- reboot, not your laptop
 
 # Manual toolhead offset calibration
 - for the X and Y calibration use the `calibrate_separation` macro to print the calibration lines, you are responsible for heating up your bed and extruders, dont forget to z-tilt and the bed mesh
