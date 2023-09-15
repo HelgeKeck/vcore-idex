@@ -31,8 +31,7 @@ function stop_klipper {
 function link_custom_folder {
     if [ -d "${CONFIG_DIR}" ]; then
         if [ -d "${CONFIG_DIR}/custom" ]; then
-            echo -e "ERROR: ${CONFIG_DIR}/custom already exists."
-            exit 1
+            echo -e "${CONFIG_DIR}/custom already exists, skipping..."
         else
             ln -s ${SRCDIR}/klipper_config/custom ${CONFIG_DIR}/custom
             echo -e "custom folder linked"
@@ -73,6 +72,16 @@ function copy_example_cfg {
     fi
 }
 
+function link_klippy_extension {
+    if [ -d "${KLIPPY_EXTRAS}" ]; then
+        rm -f "${KLIPPY_EXTRAS}/zoffsetprobe.py"
+        ln -sf "${SRCDIR}/klippy/zoffsetprobe.py" "${KLIPPY_EXTRAS}/zoffsetprobe.py"
+    else
+        echo -e "ERROR: ${KLIPPY_EXTRAS} not found."
+        exit 1
+    fi
+}
+
 function update_udev_rules {
     if [ -d "${CONFIG_DIR}" ]; then
         sudo ~/printer_data/config/RatOS/scripts/ratos-update.sh
@@ -89,6 +98,7 @@ link_custom_folder
 copy_variables_file
 copy_board_files
 copy_example_cfg
+link_klippy_extension
 update_udev_rules
 start_klipper
 echo -e ""
