@@ -45,6 +45,9 @@ initial_GREEN: 0.0
 
 # Z-Offset Probe configuration
 This is optional but recommended. VAOC enables the z-offset probe feature if it detects the configured `zoffsetprobe` object.
+
+The Z-Offset probe works exactly like a Super Pinda does, with all sanity checks, safety features and g-code commands like `Z_OFFSET_PROBE`, `Z_OFFSET_QUERY_PROBE` and `Z_OFFSET_PROBE_ACCURACY` . It is the same code base with just a few changes.
+
 ```ini
 [zoffsetprobe]
 pin: ^!PE7                      # probe trigger pin
