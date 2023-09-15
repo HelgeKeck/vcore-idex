@@ -31,17 +31,12 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - copy the [ratos-variables.cfg](/klipper_config/ratos-variables.cfg) file into ```~/printer_data/config/```
 - copy the [btt-ebb42-12b](/klipper_config/RatOS/boards) folder into ```~/printer_data/config/RatOS/boards```
 
-**4. enable IDEX input shaper scripts**
+**4. SSH into the pi and run**
 ```ini
 chmod 750 ~/printer_data/config/custom/scripts/*.sh
-```
-
-**5. enable secondary BTT EBB42 V1.2 auto flashing**
-```ini
 sudo ~/printer_data/config/RatOS/scripts/ratos-update.sh
+sudo reboot
 ```
-
-**6. restart the pi**
 
 # Manual toolhead offset calibration
 - for the X and Y calibration use the `calibrate_separation` macro to print the calibration lines, you are responsible for heating up your bed and extruders, dont forget to z-tilt and the bed mesh
