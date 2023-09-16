@@ -34,7 +34,7 @@ restart klipper and moonraker
 
 go to the machine tab and update mainsail
 
-# Non RatOS: Install the VAOC mainsail fork
+# Manual installation the VAOC mainsail fork
 ***Skip these steps if you use RatOS!*** 
 
 clone the repo
