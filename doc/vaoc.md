@@ -21,7 +21,7 @@ Use a cheap camera, like a raspi 5MP, to get easy, fast and perfect toolhead off
 - set the camera to its highest resolution
 - The [ratos-variables.cfg](../klipper_config/ratos-variables.cfg) in your config folder.
 
-# RatOS: Install the VAOC mainsail fork
+<!-- # RatOS: Install the VAOC mainsail fork
 
 add the update manager entry to the moonraker.conf file in your config folder
 
@@ -32,10 +32,12 @@ repo: helgekeck/mainsail
 
 restart klipper and moonraker
 
-go to the machine tab and update mainsail
+go to the machine tab and update mainsail -->
 
-# Non RatOS: Install the VAOC mainsail fork
-***Skip these steps if you use RatOS!*** 
+<!-- # Non RatOS: Install the VAOC mainsail fork
+***Skip these steps if you use RatOS!***  -->
+
+# Install the VAOC mainsail fork
 
 clone the repo
 
