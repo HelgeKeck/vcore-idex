@@ -109,7 +109,7 @@ copy_variables_file
 copy_board_files
 copy_example_cfg
 link_klippy_extension
-copy_modified_release_info
+# copy_modified_release_info
 update_udev_rules
 start_klipper
 echo -e ""
