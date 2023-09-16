@@ -64,7 +64,8 @@ git pull
 ```
 
 # Camera LED configuration
-This is optional but recommended. VAOC enables the LED feature if it detects a LED with the name `nozzle_calibration_led`.
+Control a camera LED through the VAOC interface.
+
 ```ini
 [neopixel nozzle_calibration_led]
 pin: PE15
@@ -74,9 +75,15 @@ initial_RED: 0.0
 initial_GREEN: 0.0
 ```
 
-# Z-Offset Probe configuration
-This is optional but recommended. VAOC enables the z-offset probe feature if it detects the configured `zoffsetprobe` object.
+VAOC enables the LED on/off switch if it detects a LED with the name `nozzle_calibration_led`.
 
+<img src="../gfx/vaoc4.jpg" alt="" width="320"/>
+
+G-Code Macros: 
+- [NOZZLE_CALIBRATION_LIGHT_ON](../klipper_config/custom/macros/nozzle_calibration.cfg#L243) 
+- [NOZZLE_CALIBRATION_LIGHT_OFF](../klipper_config/custom/macros/nozzle_calibration.cfg#L248) 
+
+# Z-Offset Probe configuration
 The Z-Offset probe works exactly like a Super Pinda does, with all sanity checks, safety features and g-code commands like `Z_OFFSET_PROBE`, `Z_OFFSET_QUERY_PROBE` and `Z_OFFSET_PROBE_ACCURACY` . It is the same code base with just a few changes.
 
 ```ini
@@ -94,6 +101,15 @@ samples_tolerance: 0.2
 samples_tolerance_retries: 5
 ```
 
+VAOC enables the z-offset probe button if it detects the configured `zoffsetprobe` object.
+
+<img src="../gfx/vaoc5.jpg" alt="" width="320"/>
+
+For safety reasons this button is by default disabled, its only active righ after pressing `SET`. Make sure your nozzle is centered on the camera before pressing that button.
+
+G-Code Macros: 
+- [_NOZZLE_CALIBRATION_PROBE_Z_OFFSET](../klipper_config/custom/macros/nozzle_calibration.cfg#L154) 
+
 # Activate the webcam overlay
 <img src="../gfx/vaoc1.jpg" alt="" width="480"/>
 
@@ -102,7 +118,7 @@ change the `Pixel per MM` value until the small circle fills the nozzle hole. Ma
 
 <img src="../gfx/vaoc2.jpg" alt="" width="320"/>
 
-# Set the initial reference point
+# Set the reference point
 **1.** home your printer 
 
 **2.** activate the primary toolhead, *T1 for the V-Core IDEX*
@@ -119,6 +135,10 @@ This will save the current coordinates and uses them as the reference point. Eve
 
 **6.** after you press `set`, and if you have a z-offset probe configured, the red `Z-PROBE` button will apear. Press it to probe the primary toolhead and to store the reference z-offset point.  
 
+G-Code Macros: 
+- [_NOZZLE_CALIBRATION_LOAD_TOOL](../klipper_config/custom/macros/nozzle_calibration.cfg#L97) 
+- [_NOZZLE_CALIBRATION_SET_TOOL](../klipper_config/custom/macros/nozzle_calibration.cfg#L119) 
+
 # Set the toolhead offset 
 **1.** load the primary toolhead to its reference point, *T1 for the V-Core IDEX*, make some adjustments if needed
 
@@ -132,3 +152,6 @@ This will save the current coordinates and uses them as the reference point. Eve
 
 **6.** after you press `set`, and if you have a z-offset probe configured, the red `Z-PROBE` button will apear. Press it for the automatic z-offset calibration. Results will be stored automatically.  
  
+G-Code Macros: 
+- [_NOZZLE_CALIBRATION_LOAD_TOOL](../klipper_config/custom/macros/nozzle_calibration.cfg#L97) 
+- [_NOZZLE_CALIBRATION_SET_TOOL](../klipper_config/custom/macros/nozzle_calibration.cfg#L119) 
