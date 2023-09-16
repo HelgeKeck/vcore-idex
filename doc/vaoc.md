@@ -19,18 +19,7 @@ Use a cheap camera, like a raspi 5MP, to get easy, fast and perfect toolhead off
 - instead of the public mainsail release, use this [fork](https://github.com/HelgeKeck/mainsail/tree/nozzle-offset-calibration) instead
 - Adaptive MJPEG-Streamer camera, i recommend the raspberry PI 5MP camera.
 - set the camera to its highest resolution
-- The [ratos-variables.cfg](../klipper_config/ratos-variables.cfg) in your config folder and these variable names.
-```ini
-[Variables]
-yoffset = 0.0
-xoffset = 0.0
-zoffset = 0.0
-applied_offset = 1
-xcontrolpoint = 100.0
-ycontrolpoint = 100.0
-zcontrolpoint = 100.0
-zoffsetcontrolpoint = 100.0
-```
+- The [ratos-variables.cfg](../klipper_config/ratos-variables.cfg) in your config folder.
 
 # Install the VAOC Mainsail fork
 clone the repo
