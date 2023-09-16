@@ -12,6 +12,7 @@ set -e
 SRCDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/ && pwd )"
 
 # Default Parameters
+MAINSAIL_DIR="${HOME}/mainsail"
 CONFIG_DIR="${HOME}/printer_data/config"
 KLIPPY_EXTRAS="${HOME}/klipper/klippy/extras"
 
@@ -82,6 +83,14 @@ function link_klippy_extension {
     fi
 }
 
+function copy_modified_release_info {
+    if [ -d "${MAINSAIL_DIR}" ]; then
+        cp "${SRCDIR}/assets/release_info.json" "${MAINSAIL_DIR}/release_info.json"
+    else
+        echo -e "ERROR: ${MAINSAIL_DIR} not found."
+    fi
+}
+
 function update_udev_rules {
     if [ -d "${CONFIG_DIR}" ]; then
         sudo ~/printer_data/config/RatOS/scripts/ratos-update.sh
@@ -99,6 +108,7 @@ copy_variables_file
 copy_board_files
 copy_example_cfg
 link_klippy_extension
+copy_modified_release_info
 update_udev_rules
 start_klipper
 echo -e ""

@@ -32,7 +32,7 @@ cd ~/
 git clone https://github.com/HelgeKeck/vcore-idex.git
 bash ~/vcore-idex/install.sh
 ```
-- update moonraker.conf
+- add the update manager entry to the moonraker.conf file in your config folder
 ```ini
 [update_manager IDEX]
 type: git_repo
