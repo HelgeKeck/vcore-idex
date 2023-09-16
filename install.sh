@@ -86,6 +86,7 @@ function link_klippy_extension {
 function copy_modified_release_info {
     if [ -d "${MAINSAIL_DIR}" ]; then
         cp "${SRCDIR}/assets/release_info.json" "${MAINSAIL_DIR}/release_info.json"
+        echo -e "modified release_info.json copied"
     else
         echo -e "ERROR: ${MAINSAIL_DIR} not found."
     fi
