@@ -1,14 +1,17 @@
 # **VAOC** - *Visual Assisted Offset Calibration*
-Use a cheap camera, like a raspi 5MP, to get easy, fast and perfect toolhead offsets. In seconds.
-- full RatOS 2.X compatibility
-- [macros](../klipper_config/custom/macros/nozzle_calibration.cfg#L94) can easily be changed to work with toolchanger or other non RatOS printers
-- directly integrated into the mainsail user interface
-- ultra fast drag and drop XY-offset calibration.
-- manual XY-offset calibration through the mainsail navigation buttons
-- manual Z-offset calibration based on camera focus, sub 0.1mm accuracy
-- one click auto z-offset calibration with a optional switch, 0.00Xmm accuracy  
-- control a camera LED directly through the interface
-- supports the new ultra fast toolchanges, switch between toolheads in a blink of an eye
+Utilize an affordable camera such as the Raspberry Pi 5MP for swift and precise toolhead offset adjustments, accomplished in mere seconds.
+
+Key features include:
+
+- Full compatibility with RatOS 2.X
+- [Macros](../klipper_config/custom/macros/nozzle_calibration.cfg#L94) can be effortlessly adapted for toolchanger or other non-RatOS printers.
+- Seamlessly integrated into the Mainsail user interface.
+- Lightning-fast drag-and-drop XY-offset calibration.
+- Manual XY-offset calibration via the Mainsail navigation buttons.
+- Manual Z-offset calibration based on camera focus, achieving sub-0.1mm accuracy.
+- One-click automatic Z-offset calibration with an optional switch, offering 0.00Xmm accuracy.  
+- Direct control of a camera LED through the interface.
+- Support for the new ultra-fast tool changes, allowing you to switch between toolheads in the blink of an eye.
 - [watch the drag and drop XY-Offset calibration video](https://youtu.be/3SWbWAmu-hM)
 - [watch the automatic Z-Offset probe calibration video](https://youtu.be/InJN57BFA_c)
 - [watch the ultra fast toolchange video](https://youtu.be/YhUzwRg1qpU)
