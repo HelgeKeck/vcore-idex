@@ -120,19 +120,19 @@ G-Code Macros:
 # Webcam orientation
 change the webcam image orientation so that the nozzle moves in the correct directions
 
-<img src="../gfx/vaoc11.jpg" alt="" width="320"/>
+<img src="../gfx/vaoc11.jpg" alt="" width="480"/>
 
-<img src="../gfx/vaoc12.jpg" alt="" width="320"/>
+<img src="../gfx/vaoc12.jpg" alt="" width="480"/>
 
 # Drag and drop orientation
 change the drag and drop orientation if needed
 
-<img src="../gfx/vaoc13.jpg" alt="" width="320"/>
+<img src="../gfx/vaoc13.jpg" alt="" width="480"/>
 
 # Calibrate Pixel per MM value
 change the `Pixel per MM` value. Best is to open two windows, one with the webcam panel open.
 
-<img src="../gfx/vaoc2.jpg" alt="" width="320"/>
+<img src="../gfx/vaoc2.jpg" alt="" width="480"/>
 
 **1.** home your printer
 
@@ -142,19 +142,19 @@ change the `Pixel per MM` value. Best is to open two windows, one with the webca
 
 **4.** roughly change the `Pixel per MM` value until it looks like this.  
 
-<img src="../gfx/vaoc6.jpg" alt="" width="320"/>
+<img src="../gfx/vaoc6.jpg" alt="" width="480"/>
 
 *The inner circle size is caclulated by `Pixel per MM` x `nozzle_diameter`, the outer one by `Pixel per MM` x `1.0mm`*
 
-<img src="../gfx/vaoc7.jpg" alt="" width="320"/>
+<img src="../gfx/vaoc7.jpg" alt="" width="480"/>
 
 **5.** move the toolhead 1mm to the right side
 
 **6.** compare point 1 and 2 to test if the toolhead moved exactly 1mm or not
 
-<img src="../gfx/vaoc9.jpg" alt="" width="320"/>
+<img src="../gfx/vaoc9.jpg" alt="" width="480"/>
 
-<img src="../gfx/vaoc10.jpg" alt="" width="320"/>
+<img src="../gfx/vaoc10.jpg" alt="" width="480"/>
 
 
 # Set the reference point
