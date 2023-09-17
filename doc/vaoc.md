@@ -150,7 +150,7 @@ change the `Pixel per MM` value. Best is to open two windows, one with the webca
 
 **5.** move the toolhead 1mm to the right side
 
-**6.** compare point 1 and 2 to test if the toolhead moved exactly 1mm or not
+**6.** compare point 1 and 2 to test if the toolhead moved exactly 1mm or not and finetune the `Pixel per MM` value.
 
 <img src="../gfx/vaoc9.jpg" alt="" width="480"/>
 
