@@ -22,6 +22,9 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - Name your part cooling fans ```heater_fan toolhead_cooling_fan``` *left* and ```heater_fan toolhead_cooling_fanb``` *right*
 - The z-probe **MUST** be on to the right toolhead
 - make sure the left nozzle is **NOT** lower then the right nozzle, ideally they have the same z-offset
+- place the `X` and `DUAL_CARRIAGE` endstops as much outside as possible, to its max position where they still work
+- make sure the `X` and `DUAL_CARRIAGE` `endstop_position` values is correct
+- your toolhead offsets should be less than 1mm
 
 # Install RatOS IDEX
 - install RatOS for V-Core 3
