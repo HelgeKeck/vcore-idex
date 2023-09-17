@@ -88,7 +88,7 @@ G-Code Macros:
 - [NOZZLE_CALIBRATION_LIGHT_OFF](../klipper_config/custom/macros/nozzle_calibration.cfg#L248) 
 
 # Z-Offset Probe configuration
-The Z-Offset probe works exactly like a Super Pinda does, with all sanity checks, safety features and g-code commands like `Z_OFFSET_PROBE`, `Z_OFFSET_QUERY_PROBE` and `Z_OFFSET_PROBE_ACCURACY` . It is the same code base with just a few changes.
+The Z-Offset probe works exactly like a Super Pinda does, with all sanity checks, safety features and g-code commands like `Z_OFFSET_PROBE`, `Z_OFFSET_QUERY_PROBE` and `Z_OFFSET_PROBE_ACCURACY` . It has the same code base with just a few changes.
 
 ```ini
 [zoffsetprobe]
