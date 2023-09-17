@@ -76,7 +76,7 @@ managed_services:
 - *`X_ADJUST=-1` to subtract 1 from the current x-offset*
 
 # **NEW!** - Visual assisted toolhead offset calibration
-Use a cheap camera, like a raspi 5MP, to get easy, fast and perfect toolhead offsets. In seconds.
+Utilize an affordable camera such as the Raspberry Pi 5MP for swift and precise toolhead offset adjustments, accomplished in mere seconds.
 
 [read more](doc/vaoc.md)
 
