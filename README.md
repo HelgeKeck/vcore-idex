@@ -23,7 +23,7 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - The z-probe **MUST** be on to the right toolhead
 - make sure the left nozzle is **NOT** lower then the right nozzle, ideally they have the same z-offset
 - place the `X` and `DUAL_CARRIAGE` endstop stoppers as much outside as possible, to its max position where they still work
-- make sure the `X` and `DUAL_CARRIAGE` `endstop_position` values is correct
+- tune the `X` and `DUAL_CARRIAGE` `endstop_position` values to its correct positions 
 - your toolhead offsets should be less than 1mm
 
 # Install RatOS IDEX
