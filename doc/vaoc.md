@@ -87,8 +87,8 @@ VAOC enables the LED on/off switch if it detects a LED with the name `nozzle_cal
 <img src="../gfx/vaoc4.jpg" alt="" width="320"/>
 
 G-Code Macros: 
-- [NOZZLE_CALIBRATION_LIGHT_ON](../klipper_config/custom/macros/nozzle_calibration.cfg#L243) 
-- [NOZZLE_CALIBRATION_LIGHT_OFF](../klipper_config/custom/macros/nozzle_calibration.cfg#L248) 
+- [NOZZLE_CALIBRATION_LIGHT_ON](../klipper_config/custom/macros/nozzle_calibration.cfg#L245) 
+- [NOZZLE_CALIBRATION_LIGHT_OFF](../klipper_config/custom/macros/nozzle_calibration.cfg#L250) 
 
 # Z-Offset Probe configuration
 The Z-Offset probe works exactly like a Super Pinda does, with all sanity checks, safety features and g-code commands like `Z_OFFSET_PROBE`, `Z_OFFSET_QUERY_PROBE` and `Z_OFFSET_PROBE_ACCURACY` . It has the same code base with just a few changes.
@@ -115,7 +115,7 @@ VAOC enables the z-offset probe button if it detects the configured `zoffsetprob
 For safety reasons this button is by default disabled, its only active righ after pressing `SET`. Make sure your nozzle is centered on the camera before pressing that button.
 
 G-Code Macros: 
-- [_NOZZLE_CALIBRATION_PROBE_Z_OFFSET](../klipper_config/custom/macros/nozzle_calibration.cfg#L154) 
+- [_NOZZLE_CALIBRATION_PROBE_Z_OFFSET](../klipper_config/custom/macros/nozzle_calibration.cfg#L156) 
 
 # Activate the webcam overlay
 <img src="../gfx/vaoc1.jpg" alt="" width="480"/>
@@ -179,7 +179,7 @@ This will save the current coordinates and uses them as the reference point. Eve
 
 G-Code Macros: 
 - [_NOZZLE_CALIBRATION_LOAD_TOOL](../klipper_config/custom/macros/nozzle_calibration.cfg#L97) 
-- [_NOZZLE_CALIBRATION_SET_TOOL](../klipper_config/custom/macros/nozzle_calibration.cfg#L119) 
+- [_NOZZLE_CALIBRATION_SET_TOOL](../klipper_config/custom/macros/nozzle_calibration.cfg#L121) 
 
 # Set the toolhead offset 
 **1.** load the primary toolhead to its reference point, *T1 for the V-Core IDEX*, make some adjustments if needed
@@ -196,4 +196,4 @@ G-Code Macros:
  
 G-Code Macros: 
 - [_NOZZLE_CALIBRATION_LOAD_TOOL](../klipper_config/custom/macros/nozzle_calibration.cfg#L97) 
-- [_NOZZLE_CALIBRATION_SET_TOOL](../klipper_config/custom/macros/nozzle_calibration.cfg#L119) 
+- [_NOZZLE_CALIBRATION_SET_TOOL](../klipper_config/custom/macros/nozzle_calibration.cfg#L121) 
