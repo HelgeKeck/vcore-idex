@@ -61,7 +61,7 @@ managed_services:
 - `FEEDRATE` Feedrate for retract/extrude
 - `SPEED` XY Travel Speed
 - `ACCEL` XY Travel Accel
-- `SYNC_FANS` 0=OFF 1=ON. Forces fan synchronisation in single mode
+- `SYNC_FANS` 0=OFF 1=ON. Forces fan synchronisation in single mode. *Helpful because the new ultra fast toolchanges can be **MUCH** faster than your part cooling fan spin up time. **TIP! The Sanyo Denki 9GAX0412P3S001 4028 is almost as fast as the toolchanges***   
 
 <img src="gfx/toolchange.jpg" alt="" width="320"/>
 
