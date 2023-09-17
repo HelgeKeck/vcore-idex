@@ -3,7 +3,7 @@ Use a cheap camera, like a raspi 5MP, to get easy, fast and perfect toolhead off
 - full RatOS 2.X compatibility
 - [macros](../klipper_config/custom/macros/nozzle_calibration.cfg#L94) can easily be changed to work with toolchanger or other non RatOS printers
 - directly integrated into the mainsail user interface
-- ultra fast drag and drop XY-offset calibration
+- ultra fast drag and drop XY-offset calibration.
 - manual XY-offset calibration through the mainsail navigation buttons
 - manual Z-offset calibration based on camera focus, sub 0.1mm accuracy
 - one click auto z-offset calibration with a optional switch, 0.00Xmm accuracy  
@@ -117,10 +117,45 @@ G-Code Macros:
 # Activate the webcam overlay
 <img src="../gfx/vaoc1.jpg" alt="" width="480"/>
 
+# Webcam orientation
+change the webcam image orientation so that the nozzle moves in the correct directions
+
+<img src="../gfx/vaoc11.jpg" alt="" width="320"/>
+
+<img src="../gfx/vaoc12.jpg" alt="" width="320"/>
+
+# Drag and drop orientation
+change the drag and drop orientation if needed
+
+<img src="../gfx/vaoc13.jpg" alt="" width="320"/>
+
 # Calibrate Pixel per MM value
-change the `Pixel per MM` value until the small circle fills the nozzle hole. Make sure the nozzle tip is in focus
+change the `Pixel per MM` value. Best is to open two windows, one with the webcam panel open.
 
 <img src="../gfx/vaoc2.jpg" alt="" width="320"/>
+
+**1.** home your printer
+
+**2.** move the nozzle directly over the camera, make sure the nozzle is centered
+
+**3.** move in Z to focus on the nozzle tip
+
+**4.** roughly change the `Pixel per MM` value until it looks like this.  
+
+<img src="../gfx/vaoc6.jpg" alt="" width="320"/>
+
+*The inner circle size is caclulated by `Pixel per MM` x `nozzle_diameter`, the outer one by `Pixel per MM` x `1.0mm`*
+
+<img src="../gfx/vaoc7.jpg" alt="" width="320"/>
+
+**5.** move the toolhead 1mm to the right side
+
+**6.** compare point 1 and 2 to test if the toolhead moved exactly 1mm or not
+
+<img src="../gfx/vaoc9.jpg" alt="" width="320"/>
+
+<img src="../gfx/vaoc10.jpg" alt="" width="320"/>
+
 
 # Set the reference point
 **1.** home your printer 
@@ -129,7 +164,7 @@ change the `Pixel per MM` value until the small circle fills the nozzle hole. Ma
 
 **3.** place the camera on the build plate
 
-**4.** move the toolhead with the navigation buttons over the camera, center the nozzle, Make sure the nozzle tip is in focus.
+**4.** move the nozzle directly over the camera, center the nozzle, Make sure the nozzle tip is in focus. 
 
 **5.** press `SET` in the UI. 
 
@@ -148,7 +183,7 @@ G-Code Macros:
 
 **2.** load the seconodary toolhead by clicking `T0` or `T1`, *T0 for the V-Core IDEX*, from the VAOC interface. 
 
-**3.** move the nozzle with the navigation buttons, or via drag and drop operation, to its correct xy position
+**3.** move the nozzle to its correct xy position. 
 
 **4.** move in z to focus the nozzle
 
