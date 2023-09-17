@@ -42,7 +42,8 @@ type: git_repo
 primary_branch: main
 path: ~/vcore-idex
 origin: https://github.com/HelgeKeck/vcore-idex.git
-is_system_service: False
+managed_services:
+	klipper
 ```
 - reboot, not your laptop
 
