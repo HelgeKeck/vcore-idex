@@ -1,6 +1,7 @@
 # Z-Probe support
 #
 # Copyright (C) 2017-2021  Kevin O'Connor <kevin@koconnor.net>
+# Modified by Helge Keck <HelgeKeck@hotmail.com.com>
 #
 # This file may be distributed under the terms of the GNU GPLv3 license.
 import logging
