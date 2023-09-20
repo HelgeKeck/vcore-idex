@@ -55,33 +55,31 @@ def process_gcodefile(args, sourcefile):
     writefile = None
 
     try:
-        with open(sourcefile, "w", newline='\n', encoding='UTF-8') as writefile:
-
-            # test for multiple toolchanges
-            tag_count = 0
-            start_print_line = 0
-            for line in range(len(lines)):
-                if lines[line].rstrip().startswith("START_PRINT") and start_print_line == 0:
-                    start_print_line = line
-                if lines[line].rstrip().startswith(";tool change post processor tag"):
-                    tag_count += 1
-                if tag_count == 2:
-                    break
+        # test for multiple toolchanges
+        tag_count = 0
+        start_print_line = 0
+        for line in range(len(lines)):
+            if lines[line].rstrip().startswith("START_PRINT") and start_print_line == 0:
+                start_print_line = line
+            if lines[line].rstrip().startswith(";tool change post processor tag"):
+                tag_count += 1
             if tag_count == 2:
-                lines[start_print_line] = lines[start_print_line].rstrip() + ' BOTH_TOOLHEADS=True\n'
-            else:
-                lines[start_print_line] = lines[start_print_line].rstrip() + ' BOTH_TOOLHEADS=False\n'
+                break
+        if tag_count < 2:
+            lines[start_print_line] = lines[start_print_line].rstrip() + ' BOTH_TOOLHEADS=False\n'
 
-            # remove first toolchange
-            if start_print_line > 0:
-                for line in range(len(lines)):
-                    if lines[line].rstrip().startswith("T0") or lines[line].rstrip().startswith("T1"):
-                        lines[line] = '\n'
-                        break
+        # remove first toolchange
+        if start_print_line > 0:
+            for line in range(len(lines)):
+                if lines[line].rstrip().startswith("T0") or lines[line].rstrip().startswith("T1"):
+                    lines[line] = '\n'
+                    break
 
-            # write file
-            for i, strline in enumerate(lines):
-                writefile.write(strline)
+        # write file if needed
+        if start_print_line > 0:
+            with open(sourcefile, "w", newline='\n', encoding='UTF-8') as writefile:
+                for i, strline in enumerate(lines):
+                    writefile.write(strline)
 
     except Exception as exc:
         print("Oops! Something went wrong. " + str(exc))
