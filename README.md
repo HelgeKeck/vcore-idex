@@ -75,6 +75,13 @@ managed_services:
 - *`X_ADJUST=1` to add 1 to the current x-offset*
 - *`X_ADJUST=-1` to subtract 1 from the current x-offset*
 
+# Visual assisted toolhead offset calibration
+Utilize an affordable camera such as the Raspberry Pi 5MP for swift and precise toolhead offset adjustments, accomplished in mere seconds.
+
+[read more](doc/vaoc.md)
+
+<img src="gfx/nozzle_calibration2.jpg" alt="" width="480"/>
+
 # IDEX Mainsail modifications
 
 Idex mode controls 
@@ -84,13 +91,6 @@ Idex mode controls
 Idex extruder controls 
 
 <img src="gfx/extruderpanel.jpg" alt="" width="320"/>
-
-# Visual assisted toolhead offset calibration
-Utilize an affordable camera such as the Raspberry Pi 5MP for swift and precise toolhead offset adjustments, accomplished in mere seconds.
-
-[read more](doc/vaoc.md)
-
-<img src="gfx/nozzle_calibration2.jpg" alt="" width="480"/>
 
 # Prusa Slicer / Super Slicer
 
