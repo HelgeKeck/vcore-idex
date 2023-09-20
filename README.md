@@ -85,7 +85,7 @@ Idex extruder controls
 
 <img src="gfx/extruderpanel.jpg" alt="" width="320"/>
 
-# **NEW!** - Visual assisted toolhead offset calibration
+# Visual assisted toolhead offset calibration
 Utilize an affordable camera such as the Raspberry Pi 5MP for swift and precise toolhead offset adjustments, accomplished in mere seconds.
 
 [read more](doc/vaoc.md)
