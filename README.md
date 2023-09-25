@@ -101,7 +101,7 @@ Idex extruder controls
 
 - Start G-Code
 ```ini
-START_PRINT EXTRUDER_TEMP={first_layer_temperature[0]} EXTRUDER_TEMP_1={first_layer_temperature[1]} EXTRUDER_OTHER_LAYER_TEMP={temperature[0]} EXTRUDER_OTHER_LAYER_TEMP_1={temperature[1]} BED_TEMP=[first_layer_bed_temperature] X0={first_layer_print_min[0]} Y0={first_layer_print_min[1]} X1={first_layer_print_max[0]} Y1={first_layer_print_max[1]} INITIAL_TOOL={initial_tool} COLOR={filament_colour[0]} COLOR_1={filament_colour[1]}
+START_PRINT EXTRUDER_TEMP={first_layer_temperature[0]} EXTRUDER_TEMP_1={first_layer_temperature[1]} EXTRUDER_OTHER_LAYER_TEMP={temperature[0]} EXTRUDER_OTHER_LAYER_TEMP_1={temperature[1]} BED_TEMP=[first_layer_bed_temperature] X0={first_layer_print_min[0]} Y0={first_layer_print_min[1]} X1={first_layer_print_max[0]} Y1={first_layer_print_max[1]} INITIAL_TOOL={initial_tool} COLOR={extruder_colour[0]} COLOR_1={extruder_colour[1]}
 ```
 
 - End G-Code
@@ -120,6 +120,10 @@ Both lines are important
 ;tool change post processor tag
 T[next_extruder] P1
 ```
+
+- G-code substitutions
+
+<img src="gfx/color.jpg" alt="" width="640"/>
 
 - Post processing script. 
 Optional but recommended, tells klipper if all toolheads are in use.
