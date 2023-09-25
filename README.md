@@ -6,22 +6,27 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - native IDEX copy and mirror mode 
 - adaptive bed meshing for both toolheads
 - **NEW!** - ultra fast toolchanges, up to 0.3 seconds
-- **NEW!** - support for visual assisted toolhead offset calibration
+- **NEW!** - visual assisted toolhead offset calibration
 - **NEW!** - built in z-offset probe support
 - **NEW!** - [better oozeguards](oozeguard)
+- **NEW!** - inverted hybrid core-xy klipper bug fixed
+- **NEW!** - allows probing with both toolheads
+- **NEW!** - IDEX ***spool mode***, infinite spool feature  
+- **NEW!** - IDEX ***mixed mode***, inversed multicolor prints in copy and mirror mode  
+- **NEW!** - IDEX ***free mode***, soon 
+
 
 # V-Core IDEX toolchange video
 [![V-Core IDEX Toolchange](https://img.youtube.com/vi/lKBVmPfxjEk/maxresdefault.jpg)](https://youtu.be/lKBVmPfxjEk)
 
 # Hardware
-- Left toolhead **MUST** be the ```Dual Carriage``` toolhead
-- Right toolhead **MUST** be the ```X``` toolhead
+- Left toolhead **MUST** be the ```X``` toolhead
+- Right toolhead **MUST** be the ```Dual Carriage``` toolhead
 - Name your extruders ```extruder``` *left* and ```extruder1``` *right*
 - Name your toolboards ```toolboard``` *left* and ```toolboardb``` *right*
 - Name your toolboard adxl ```adxl345 toolboard``` *left* and ```adxl345 toolboardb``` *right*
 - Name your part cooling fans ```heater_fan toolhead_cooling_fan``` *left* and ```heater_fan toolhead_cooling_fanb``` *right*
-- The z-probe **MUST** be on to the right toolhead
-- make sure the left nozzle is **NOT** lower then the right nozzle, ideally they have the same z-offset
+- make sure the nozzle from the z-probe toolhead is **NOT** higher then the other nozzle, ideally they have the same z-offset
 - place the `X` and `DUAL_CARRIAGE` endstop stoppers as much outside as possible, to their max positions where they still work
 - tune the `X` and `DUAL_CARRIAGE` `endstop_position` values to its correct positions 
 - your toolhead offsets should be less than 1mm
