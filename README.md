@@ -16,6 +16,18 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 # V-Core IDEX toolchange video
 [![V-Core IDEX Toolchange](https://img.youtube.com/vi/lKBVmPfxjEk/maxresdefault.jpg)](https://youtu.be/lKBVmPfxjEk)
 
+# Hardware
+- Left toolhead **MUST** be the ```X``` toolhead
+- Right toolhead **MUST** be the ```Dual Carriage``` toolhead
+- Name your extruders ```extruder``` *left* and ```extruder1``` *right*
+- Name your toolboards ```toolboard``` *left* and ```toolboardb``` *right*
+- Name your toolboard adxl ```adxl345 toolboard``` *left* and ```adxl345 toolboardb``` *right*
+- Name your part cooling fans ```heater_fan toolhead_cooling_fan``` *left* and ```heater_fan toolhead_cooling_fanb``` *right*
+- make sure the nozzle from the z-probe toolhead is **NOT** higher then the other nozzle, ideally they have the same z-offset
+- place the `X` and `DUAL_CARRIAGE` endstop stoppers as much outside as possible, to their max positions where they still work
+- tune the `X` and `DUAL_CARRIAGE` `endstop_position` values to its correct positions 
+- your toolhead offsets should be less than 1mm
+
 # **CHANGE**! Inverted hybrid core-xy
 You need to activate the new `inverted` setting in your `dual_carriage` configuration
 ```
@@ -35,17 +47,11 @@ You can now put the z-probe on any of the toolheads. Configure it with the RatOS
 variable_default_toolhead: 1 		# 0 = Left, 1 = Right
 ```
 
-# Hardware
-- Left toolhead **MUST** be the ```X``` toolhead
-- Right toolhead **MUST** be the ```Dual Carriage``` toolhead
-- Name your extruders ```extruder``` *left* and ```extruder1``` *right*
-- Name your toolboards ```toolboard``` *left* and ```toolboardb``` *right*
-- Name your toolboard adxl ```adxl345 toolboard``` *left* and ```adxl345 toolboardb``` *right*
-- Name your part cooling fans ```heater_fan toolhead_cooling_fan``` *left* and ```heater_fan toolhead_cooling_fanb``` *right*
-- make sure the nozzle from the z-probe toolhead is **NOT** higher then the other nozzle, ideally they have the same z-offset
-- place the `X` and `DUAL_CARRIAGE` endstop stoppers as much outside as possible, to their max positions where they still work
-- tune the `X` and `DUAL_CARRIAGE` `endstop_position` values to its correct positions 
-- your toolhead offsets should be less than 1mm
+# **CHANGE**! Run the install script again 
+Run the install script again if you have updated from a previous version.
+```
+bash ~/vcore-idex/install.sh
+```
 
 # Install RatOS IDEX
 - install RatOS for V-Core 3
