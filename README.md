@@ -24,7 +24,7 @@ inverted: True
 ```
 
 # **CHANGE**! Toolhead order
-The `X` and `Dual Carriage` positions have changed. Make sure your toolheads are on the right side, you might need to swap the stepper connectors on your board.
+The `X` and `Dual Carriage` positions have changed. Make sure your toolheads are on the correct side, you might need to swap the stepper connectors on your board.
 - Left toolhead **MUST** be the ```X``` toolhead
 - Right toolhead **MUST** be the ```Dual Carriage``` toolhead
 
