@@ -15,6 +15,7 @@ SRCDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/ && pwd )"
 MAINSAIL_DIR="${HOME}/mainsail"
 CONFIG_DIR="${HOME}/printer_data/config"
 KLIPPY_EXTRAS="${HOME}/klipper/klippy/extras"
+KLIPPY_KINEMATICS="${HOME}/klipper/klippy/kinematics"
 
 function start_klipper {
     sudo systemctl restart klipper
@@ -73,12 +74,28 @@ function copy_example_cfg {
     fi
 }
 
-function link_klippy_extension {
+function link_klippy_extras {
     if [ -d "${KLIPPY_EXTRAS}" ]; then
         rm -f "${KLIPPY_EXTRAS}/zoffsetprobe.py"
-        ln -sf "${SRCDIR}/klippy/zoffsetprobe.py" "${KLIPPY_EXTRAS}/zoffsetprobe.py"
+        ln -sf "${SRCDIR}/klippy/extras/zoffsetprobe.py" "${KLIPPY_EXTRAS}/zoffsetprobe.py"
+        rm -f "${KLIPPY_EXTRAS}/homing.py"
+        ln -sf "${SRCDIR}/klippy/extras/homing.py" "${KLIPPY_EXTRAS}/homing.py"
+        rm -f "${KLIPPY_EXTRAS}/probe.py"
+        ln -sf "${SRCDIR}/klippy/extras/probe.py" "${KLIPPY_EXTRAS}/probe.py"
     else
         echo -e "ERROR: ${KLIPPY_EXTRAS} not found."
+        exit 1
+    fi
+}
+
+function link_klippy_kinematics {
+    if [ -d "${KLIPPY_KINEMATICS}" ]; then
+        rm -f "${KLIPPY_KINEMATICS}/hybrid_corexy.py"
+        ln -sf "${SRCDIR}/klippy/kinematics/hybrid_corexy.py" "${KLIPPY_KINEMATICS}/hybrid_corexy.py"
+        rm -f "${KLIPPY_KINEMATICS}/idex_modes.py"
+        ln -sf "${SRCDIR}/klippy/kinematics/idex_modes.py" "${KLIPPY_KINEMATICS}/idex_modes.py"
+    else
+        echo -e "ERROR: ${KLIPPY_KINEMATICS} not found."
         exit 1
     fi
 }
@@ -108,7 +125,8 @@ link_custom_folder
 copy_variables_file
 copy_board_files
 copy_example_cfg
-link_klippy_extension
+link_klippy_extras
+link_klippy_kinematics
 copy_modified_release_info
 update_udev_rules
 start_klipper
