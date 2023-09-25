@@ -9,15 +9,31 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - **NEW!** - visual assisted toolhead offset calibration
 - **NEW!** - built in z-offset probe support
 - **NEW!** - [better oozeguards](oozeguard)
-- **NEW!** - inverted hybrid core-xy klipper bug fixed
-- **NEW!** - allows probing with both toolheads
 <!-- - **NEW!** - IDEX ***spool mode***, infinite spool feature  
 - **NEW!** - IDEX ***mixed mode***, inversed multicolor prints in copy and mirror mode  
 - **NEW!** - IDEX ***free mode***, soon  -->
 
-
 # V-Core IDEX toolchange video
 [![V-Core IDEX Toolchange](https://img.youtube.com/vi/lKBVmPfxjEk/maxresdefault.jpg)](https://youtu.be/lKBVmPfxjEk)
+
+# **CHANGE**! Inverted hybrid core-xy
+You need to activate the new `inverted` setting in your `dual_carriage` configuration
+```
+[dual_carriage]
+inverted: True
+```
+
+# **CHANGE**! Toolhead order
+The `X` and `Dual Carriage` positions have changed. Make sure your toolheads are on the right side, you might need to swap the stepper connectors on your board.
+- Left toolhead **MUST** be the ```X``` toolhead
+- Right toolhead **MUST** be the ```Dual Carriage``` toolhead
+
+# **CHANGE**! Probing with both toolheads
+You can now put the z-probe on any of the toolheads. Configure it with the RatOS Variable `default_toolhead`.
+```
+[gcode_macro RatOS]
+variable_default_toolhead: 1 		# 0 = Left, 1 = Right
+```
 
 # Hardware
 - Left toolhead **MUST** be the ```X``` toolhead
