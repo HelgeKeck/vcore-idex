@@ -6,25 +6,52 @@ This is a temporary RatOS IDEX Implementation. It will be online until RatOS get
 - native IDEX copy and mirror mode 
 - adaptive bed meshing for both toolheads
 - **NEW!** - ultra fast toolchanges, up to 0.3 seconds
-- **NEW!** - support for visual assisted toolhead offset calibration
+- **NEW!** - visual assisted toolhead offset calibration
 - **NEW!** - built in z-offset probe support
 - **NEW!** - [better oozeguards](oozeguard)
+<!-- - **NEW!** - IDEX ***spool mode***, infinite spool feature  
+- **NEW!** - IDEX ***mixed mode***, inversed multicolor prints in copy and mirror mode  
+- **NEW!** - IDEX ***free mode***, soon  -->
 
 # V-Core IDEX toolchange video
 [![V-Core IDEX Toolchange](https://img.youtube.com/vi/lKBVmPfxjEk/maxresdefault.jpg)](https://youtu.be/lKBVmPfxjEk)
 
 # Hardware
-- Left toolhead **MUST** be the ```Dual Carriage``` toolhead
-- Right toolhead **MUST** be the ```X``` toolhead
+- Left toolhead **MUST** be the ```X``` toolhead
+- Right toolhead **MUST** be the ```Dual Carriage``` toolhead
 - Name your extruders ```extruder``` *left* and ```extruder1``` *right*
 - Name your toolboards ```toolboard``` *left* and ```toolboardb``` *right*
 - Name your toolboard adxl ```adxl345 toolboard``` *left* and ```adxl345 toolboardb``` *right*
 - Name your part cooling fans ```heater_fan toolhead_cooling_fan``` *left* and ```heater_fan toolhead_cooling_fanb``` *right*
-- The z-probe **MUST** be on to the right toolhead
-- make sure the left nozzle is **NOT** lower then the right nozzle, ideally they have the same z-offset
+- make sure the nozzle from the z-probe toolhead is **NOT** higher then the other nozzle, ideally they have the same z-offset
 - place the `X` and `DUAL_CARRIAGE` endstop stoppers as much outside as possible, to their max positions where they still work
 - tune the `X` and `DUAL_CARRIAGE` `endstop_position` values to its correct positions 
 - your toolhead offsets should be less than 1mm
+
+# **CHANGE**! Inverted hybrid core-xy
+You need to activate the new `inverted` setting in your `dual_carriage` configuration
+```
+[dual_carriage]
+inverted: True
+```
+
+# **CHANGE**! Toolhead order
+The `X` and `Dual Carriage` positions have changed. Make sure your toolheads are on the correct side, you might need to swap the stepper connectors on your board.
+- Left toolhead **MUST** be the ```X``` toolhead
+- Right toolhead **MUST** be the ```Dual Carriage``` toolhead
+
+# **CHANGE**! Probing with both toolheads
+You can now put the z-probe on any of the toolheads. Configure it with the RatOS Variable `default_toolhead`.
+```
+[gcode_macro RatOS]
+variable_default_toolhead: 1 		# 0 = Left, 1 = Right
+```
+
+# **CHANGE**! Run the install script again 
+Run the install script again if you have updated from a previous version.
+```
+bash ~/vcore-idex/install.sh
+```
 
 # Install RatOS IDEX
 - install RatOS for V-Core 3
@@ -93,7 +120,7 @@ managed_services:
 
 - Start G-Code
 ```ini
-START_PRINT EXTRUDER_TEMP={first_layer_temperature[0]} EXTRUDER_TEMP_1={first_layer_temperature[1]} EXTRUDER_OTHER_LAYER_TEMP={temperature[0]} EXTRUDER_OTHER_LAYER_TEMP_1={temperature[1]} BED_TEMP=[first_layer_bed_temperature] X0={first_layer_print_min[0]} Y0={first_layer_print_min[1]} X1={first_layer_print_max[0]} Y1={first_layer_print_max[1]} INITIAL_TOOL={initial_tool} COLOR={filament_colour[0]} COLOR_1={filament_colour[1]}
+START_PRINT EXTRUDER_TEMP={first_layer_temperature[0]} EXTRUDER_TEMP_1={first_layer_temperature[1]} EXTRUDER_OTHER_LAYER_TEMP={temperature[0]} EXTRUDER_OTHER_LAYER_TEMP_1={temperature[1]} BED_TEMP=[first_layer_bed_temperature] X0={first_layer_print_min[0]} Y0={first_layer_print_min[1]} X1={first_layer_print_max[0]} Y1={first_layer_print_max[1]} INITIAL_TOOL={initial_tool} COLOR={extruder_colour[0]} COLOR_1={extruder_colour[1]}
 ```
 
 - End G-Code
@@ -112,6 +139,10 @@ Both lines are important
 ;tool change post processor tag
 T[next_extruder] P1
 ```
+
+- G-code substitutions
+
+<img src="gfx/color.jpg" alt="" width="640"/>
 
 - Post processing script. 
 Optional but recommended, tells klipper if all toolheads are in use.
