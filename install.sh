@@ -78,10 +78,6 @@ function link_klippy_extras {
     if [ -d "${KLIPPY_EXTRAS}" ]; then
         rm -f "${KLIPPY_EXTRAS}/zoffsetprobe.py"
         ln -sf "${SRCDIR}/klippy/extras/zoffsetprobe.py" "${KLIPPY_EXTRAS}/zoffsetprobe.py"
-        rm -f "${KLIPPY_EXTRAS}/homing.py"
-        ln -sf "${SRCDIR}/klippy/extras/homing.py" "${KLIPPY_EXTRAS}/homing.py"
-        rm -f "${KLIPPY_EXTRAS}/probe.py"
-        ln -sf "${SRCDIR}/klippy/extras/probe.py" "${KLIPPY_EXTRAS}/probe.py"
     else
         echo -e "ERROR: ${KLIPPY_EXTRAS} not found."
         exit 1
