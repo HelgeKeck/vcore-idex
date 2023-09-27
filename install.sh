@@ -115,16 +115,6 @@ function update_udev_rules {
     fi
 }
 
-function make_files_executeable {
-    if [ -d "${CONFIG_DIR}" ]; then
-        chmod 750 "${CONFIG_DIR}/RatOS/boards/btt-ebb42-12b/*.sh"
-        chmod 750 "${SRCDIR}/klipper_config/custom/scripts/*.sh"
-    else
-        echo -e "ERROR: ${CONFIG_DIR} not found."
-        exit 1
-    fi
-}
-
 echo -e "V-Core RatOS IDEX"
 stop_klipper
 link_custom_folder
@@ -134,7 +124,6 @@ copy_example_cfg
 link_klippy_extras
 link_klippy_kinematics
 copy_modified_release_info
-make_files_executeable
 update_udev_rules
 start_klipper
 echo -e ""
