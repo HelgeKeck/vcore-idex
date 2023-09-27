@@ -116,7 +116,7 @@ managed_services:
 
 <img src="gfx/extruderpanel.jpg" alt="" width="320"/>
 
-# Prusa Slicer / Super Slicer
+# **CHANGE**! Prusa Slicer / Super Slicer
 
 - Start G-Code
 ```ini
