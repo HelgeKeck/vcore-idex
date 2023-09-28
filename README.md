@@ -39,6 +39,18 @@ inverted: True
 The `X` and `Dual Carriage` positions have changed. Make sure your toolheads are on the correct side, you might need to swap the stepper connectors on your board. You maybe need to swap your x and dc endstop pins as well.
 - Left toolhead **MUST** be the ```X``` toolhead
 - Right toolhead **MUST** be the ```Dual Carriage``` toolhead
+- you also need to swap these values from one stepper to the other
+```
+[stepper_x]
+position_endstop: -74
+position_min: -74
+position_max: 376
+
+[dual_carriage]
+position_endstop: 376
+position_max: 376
+position_min: -74
+```
 
 # **CHANGE**! Probing with both toolheads
 You can now put the z-probe on any of the toolheads. Configure it with the RatOS Variable `default_toolhead`.
