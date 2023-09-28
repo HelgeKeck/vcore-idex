@@ -39,7 +39,7 @@ inverted: True
 The `X` and `Dual Carriage` positions have changed. Make sure your toolheads are on the correct side, you might need to swap the stepper connectors on your board. You maybe need to swap your x and dc endstop pins as well.
 - Left toolhead **MUST** be the ```X``` toolhead
 - Right toolhead **MUST** be the ```Dual Carriage``` toolhead
-- you also need to swap these values from one stepper to the other
+- you also need to swap these values from one stepper to the other. *but keep your settings of course, dont use mine.*
 ```
 [stepper_x]
 position_endstop: -74
