@@ -52,6 +52,12 @@ position_max: 376
 position_min: -74
 ```
 
+- swap your parking positions values as well
+```
+[gcode_macro RatOS]
+variable_parking_position: [-69.5, 372]
+```
+
 # **CHANGE**! Probing with both toolheads
 You can now put the z-probe on any of the toolheads. Configure it with the RatOS Variable `default_toolhead`.
 ```
