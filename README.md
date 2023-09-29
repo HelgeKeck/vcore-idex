@@ -1,5 +1,7 @@
 # V-Core IDEX for RatOS 2.X
-This is a temporary RatOS IDEX Implementation. Consider it as beta or alpha.
+This is a unofficial and temporary RatOS V2.X IDEX Implementation. Consider it as beta or alpha. 
+Macros are based on Mikkel Schmidt`s work and have been modified and extended by Helge Keck.
+
 - RatOS macro compatibility 
 - octopus v1.1 idex board configuration 
 - dual EBB42 toolboards with autoflashing
