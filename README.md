@@ -3,7 +3,7 @@ This is a unofficial and temporary RatOS V2.X IDEX Implementation. Consider it a
 Macros are based on [Mikkel Schmidt`s](https://github.com/miklschmidt) work and have been modified and extended by [Helge Keck](https://github.com/HelgeKeck).
 
 - RatOS macro compatibility 
-- V-Core IDEX [Mainsail fork](https://github.com/HelgeKeck/mainsail)
+- [V-Core IDEX Mainsail](https://github.com/HelgeKeck/v-core#idex#mainsail)
 - octopus v1.1 idex board configuration 
 - dual EBB42 toolboards with autoflashing
 - native IDEX copy and mirror mode 
@@ -116,7 +116,9 @@ managed_services:
 - *`X_ADJUST=1` to add 1 to the current x-offset*
 - *`X_ADJUST=-1` to subtract 1 from the current x-offset*
 
-# IDEX Mainsail modifications
+# V-Core IDEX Mainsail
+
+- This [fork](https://github.com/HelgeKeck/mainsail) contains some changes for IDEX printers.
 
 - Visual assisted toolhead offset calibration [read more](doc/vaoc.md)
 
