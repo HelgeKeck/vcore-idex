@@ -3,7 +3,7 @@ This is a unofficial and temporary RatOS V2.X IDEX Implementation. Consider it a
 Macros are based on [Mikkel Schmidt`s](https://github.com/miklschmidt) work and have been modified and extended by [Helge Keck](https://github.com/HelgeKeck).
 
 - RatOS macro compatibility 
-- [V-Core IDEX Mainsail](https://github.com/HelgeKeck/v-core#idex#mainsail)
+- V-Core IDEX Mainsail
 - octopus v1.1 idex board configuration 
 - dual EBB42 toolboards with autoflashing
 - native IDEX copy and mirror mode 
