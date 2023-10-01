@@ -3,14 +3,14 @@ This is a unofficial and temporary RatOS V2.X IDEX Implementation. Consider it a
 Macros are based on [Mikkel Schmidt`s](https://github.com/miklschmidt) work and have been modified and extended by [Helge Keck](https://github.com/HelgeKeck).
 
 - RatOS macro compatibility 
+- V-Core IDEX [Mainsail fork](https://github.com/HelgeKeck/mainsail)
 - octopus v1.1 idex board configuration 
 - dual EBB42 toolboards with autoflashing
 - native IDEX copy and mirror mode 
 - adaptive bed meshing for both toolheads
-- **NEW!** - ultra fast toolchanges, up to 0.3 seconds
-- **NEW!** - visual assisted toolhead offset calibration
-- **NEW!** - built in z-offset probe support
-- **NEW!** - [better oozeguards](oozeguard)
+- ultra fast toolchanges, up to 0.3 seconds
+- visual assisted toolhead offset calibration
+- built in z-offset probe support
 <!-- - **NEW!** - IDEX ***spool mode***, infinite spool feature  
 - **NEW!** - IDEX ***mixed mode***, inversed multicolor prints in copy and mirror mode  
 - **NEW!** - IDEX ***free mode***, soon  -->
