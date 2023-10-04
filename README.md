@@ -8,6 +8,7 @@ Macros are based on [Mikkel Schmidt`s](https://github.com/miklschmidt) work and 
 - dual EBB42 toolboards with autoflashing
 - native IDEX copy and mirror mode 
 - adaptive bed meshing for both toolheads
+- z-probing with both toolheads
 - ultra fast toolchanges, up to 0.3 seconds
 - visual assisted toolhead offset calibration
 - built in z-offset probe support
@@ -29,43 +30,6 @@ Macros are based on [Mikkel Schmidt`s](https://github.com/miklschmidt) work and 
 - place the `X` and `DUAL_CARRIAGE` endstop stoppers as much outside as possible, to their max positions where they still work
 - tune the `X` and `DUAL_CARRIAGE` `endstop_position` values to its correct positions 
 - your toolhead offsets should be less than 1mm
-
-# **CHANGE**! Inverted hybrid core-xy
-You need to activate the new `inverted` setting in your `dual_carriage` configuration
-```
-[dual_carriage]
-inverted: True
-```
-
-# **CHANGE**! Toolhead order
-The `X` and `Dual Carriage` positions have changed. Make sure your toolheads are on the correct side, you might need to swap the stepper connectors on your board. You maybe need to swap your x and dc endstop pins as well.
-- Left toolhead **MUST** be the ```X``` toolhead
-- Right toolhead **MUST** be the ```Dual Carriage``` toolhead
-- you also need to swap these values from one stepper to the other. *but keep your settings of course, dont use mine.*
-```
-[stepper_x]
-position_endstop: -74
-position_min: -74
-position_max: 376
-
-[dual_carriage]
-position_endstop: 376
-position_max: 376
-position_min: -74
-```
-
-# **CHANGE**! Probing with both toolheads
-You can now put the z-probe on any of the toolheads. Configure it with the RatOS Variable `default_toolhead`.
-```
-[gcode_macro RatOS]
-variable_default_toolhead: 1 		# 0 = Left, 1 = Right
-```
-
-# **CHANGE**! Run the install script again 
-Run the install script again if you have updated from a previous version.
-```
-bash ~/vcore-idex/install.sh
-```
 
 # Install RatOS IDEX
 - install RatOS for V-Core 3
@@ -112,7 +76,7 @@ G-Code Macros:
 <img src="gfx/toolchange.jpg" alt="" width="320"/>
 
 G-Code Macro: 
-- [IDEX_CONFIG](klipper_config/custom/macros/idex.cfg#L234) 
+- [IDEX_CONFIG](klipper_config/custom/macros/idex.cfg#L248) 
 
 # Manual toolhead offset calibration
 - for the X and Y calibration use the `calibrate_separation` macro to print the calibration lines, you are responsible for heating up your bed and extruders, dont forget to z-tilt and the bed mesh
@@ -144,7 +108,7 @@ G-Code Macros:
 
 <img src="gfx/extruderpanel.jpg" alt="" width="320"/>
 
-# **CHANGE**! Prusa Slicer / Super Slicer
+# Prusa Slicer / Super Slicer
 
 - Start G-Code
 ```ini
