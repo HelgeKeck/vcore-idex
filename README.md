@@ -93,6 +93,11 @@ managed_services:
 - to enable the Copy or Mirror mode for the next print, home your printer and then execute the ```IDEX_COPY``` or ```IDEX_MIRROR``` GCODE macro.
 - execute ```IDEX_SINGLE``` to switch back to normal mode.
 
+G-Code Macros: 
+- [IDEX_SINGLE](klipper_config/custom/macros/idex.cfg#L1) 
+- [IDEX_COPY](klipper_config/custom/macros/idex.cfg#L64) 
+- [IDEX_MIRROR](klipper_config/custom/macros/idex.cfg#L120) 
+
 # Toolchange configuration
 - `ZHOP` Z-Hop before and after the toolchange, in addition to the slicer z-hop 
 - `COMBINED_ZHOP` 0=OFF 1=ON. Combines z-hop/z-drop with retraction/deretraction moves
@@ -118,6 +123,10 @@ G-Code Macro:
 - *`X=1` to set the x-offset to 1*
 - *`X_ADJUST=1` to add 1 to the current x-offset*
 - *`X_ADJUST=-1` to subtract 1 from the current x-offset*
+
+G-Code Macros: 
+- [SET_SEPARATION](klipper_config/custom/macros/nozzle_calibration.cfg#L11) 
+- [CALIBRATE_SEPARATION](klipper_config/custom/macros/nozzle_calibration.cfg#L47) 
 
 # V-Core IDEX Mainsail
 
