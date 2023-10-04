@@ -168,6 +168,12 @@ Both lines are important
 T[next_extruder] P1
 ```
 
+- Filament G-code, setting pressure advance for IDEX printer
+```ini
+; Filament gcode
+SET_PRESSURE_ADVANCE EXTRUDER={if current_extruder==0}extruder{else}extruder1{endif} ADVANCE=0.1 SMOOTH_TIME=0.04
+```
+
 - G-code substitutions
 
 <img src="gfx/color.jpg" alt="" width="640"/>
