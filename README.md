@@ -106,6 +106,9 @@ managed_services:
 
 <img src="gfx/toolchange.jpg" alt="" width="320"/>
 
+G-Code Macro: 
+- [IDEX_CONFIG](klipper_config/custom/macros/idex.cfg#L234) 
+
 # Manual toolhead offset calibration
 - for the X and Y calibration use the `calibrate_separation` macro to print the calibration lines, you are responsible for heating up your bed and extruders, dont forget to z-tilt and the bed mesh
 - use the `SET_SEPARATION` macro to enter your toolhead offsets from the left toolhead
