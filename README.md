@@ -25,7 +25,7 @@ Macros are based on [Mikkel Schmidt`s](https://github.com/miklschmidt) work and 
 - Name your extruders ```extruder``` *left* and ```extruder1``` *right*
 - Name your toolboards ```toolboard``` *left* and ```toolboardb``` *right*
 - Name your toolboard adxl ```adxl345 toolboard``` *left* and ```adxl345 toolboardb``` *right*
-- Name your part cooling fans ```heater_fan toolhead_cooling_fan``` *left* and ```heater_fan toolhead_cooling_fanb``` *right*
+- Name your part cooling fans ```fan_generic fan_extruder``` *left* and ```fan_generic fan_extruder1``` *right*
 - make sure the nozzle from the z-probe toolhead is **NOT** higher then the other nozzle, ideally they have the same z-offset
 - place the `X` and `DUAL_CARRIAGE` endstop stoppers as much outside as possible, to their max positions where they still work
 - tune the `X` and `DUAL_CARRIAGE` `endstop_position` values to its correct positions 
