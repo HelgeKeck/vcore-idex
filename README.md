@@ -9,6 +9,7 @@ Macros are based on [Mikkel Schmidt`s](https://github.com/miklschmidt) work and 
 - native IDEX copy and mirror mode 
 - adaptive bed meshing for both toolheads
 - z-probing with both toolheads
+- idex copy and mirror mode input shaping
 - ultra fast toolchanges, up to 0.3 seconds
 - visual assisted toolhead offset calibration
 - built in z-offset probe support
