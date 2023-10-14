@@ -46,8 +46,11 @@ function link_custom_folder {
 
 function copy_variables_file {
     if [ -d "${CONFIG_DIR}" ]; then
-        cp "${SRCDIR}/klipper_config/ratos-variables.cfg" "${CONFIG_DIR}/ratos-variables.cfg"
-        echo -e "variables file copied"
+        if [ ! -e "${CONFIG_DIR}/ratos-variables.cfg" ]
+        then
+            cp "${SRCDIR}/klipper_config/ratos-variables.cfg" "${CONFIG_DIR}/ratos-variables.cfg"
+            echo -e "variables file copied"
+        fi
     else
         echo -e "ERROR: ${CONFIG_DIR} not found."
         exit 1
