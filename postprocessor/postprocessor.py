@@ -65,6 +65,28 @@ def process_gcodefile(args, sourcefile):
     if tag_count < 2:
         lines[start_print_line] = lines[start_print_line].rstrip() + ' BOTH_TOOLHEADS=False\n'
 
+    # get min max x 
+    min_x = 1000
+    max_x = 0
+    if start_print_line > 0:
+        for line in range(len(lines)):
+            if lines[line].rstrip().startswith("G1") or lines[line].rstrip().startswith("G0"):
+                split = lines[line].rstrip().replace("  ", " ").split(" ")
+                for s in range(len(split)):
+                    if split[s].lower().startswith("x"):
+                        try:
+                            x = float(split[1].lower().replace("x", ""))
+                            if x < min_x:
+                                min_x = x
+                            if x > max_x:
+                                max_x = x
+                        except Exception as exc:
+                            print("Oops! Something went wrong. " + str(exc))
+                            print("line:" + lines[line].rstrip())
+                            sys.exit(1)
+        if min_x < 1000:
+            lines[start_print_line] = lines[start_print_line].rstrip() + ' MIN_X=' + str(min_x) + ' MAX_X=' + str(max_x)
+
     # write file if changed
     if tag_count < 2:
         writefile = None
