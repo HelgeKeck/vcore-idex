@@ -85,7 +85,7 @@ def process_gcodefile(args, sourcefile):
                             print("line:" + lines[line].rstrip())
                             sys.exit(1)
         if min_x < 1000:
-            lines[start_print_line] = lines[start_print_line].rstrip() + ' MIN_X=' + str(min_x) + ' MAX_X=' + str(max_x)
+            lines[start_print_line] = lines[start_print_line].rstrip() + ' MIN_X=' + str(min_x) + ' MAX_X=' + str(max_x) + '\n'
 
     # write file if changed
     if tag_count < 2:
