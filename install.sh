@@ -63,6 +63,12 @@ function copy_board_files {
         echo -e "BTT EBB42 V1.2 board files copied"
     else
         echo -e "ERROR: ${CONFIG_DIR} not found."
+    
+    if [ -d "${CONFIG_DIR}" ]; then
+        sudo cp -av "${SRCDIR}/klipper_config/RatOS/boards/btt-ebb36-12b" "${CONFIG_DIR}/RatOS/boards"
+        echo -e "BTT EBB36 V1.2 board files copied"
+    else
+        echo -e "ERROR: ${CONFIG_DIR} not found."
         exit 1
     fi
 }

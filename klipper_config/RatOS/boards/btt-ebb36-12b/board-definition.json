@@ -1,7 +1,7 @@
 {
 	"$schema": "../board-definition.schema.json",
 	"isToolboard": true,
-	"name": "EBB36 v1.2",
+	"name": "EBB36 v1.2 Secondary",
 	"manufacturer": "BIGTREETECH",
 	"serialPath": "/dev/btt-ebb36-12b",
 	"firmwareBinaryName": "firmware-btt-ebb36-12b.bin",
