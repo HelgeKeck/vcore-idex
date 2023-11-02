@@ -7,15 +7,13 @@ Macros are based on [Mikkel Schmidt`s](https://github.com/miklschmidt) work and 
 - octopus v1.1 idex board configuration 
 - dual EBB42 toolboards with autoflashing
 - native IDEX copy and mirror mode 
+- improved hybrid corexy kinematics with AWD and single toolhead support 
 - adaptive bed meshing for both toolheads
 - z-probing with both toolheads
 - idex copy and mirror mode input shaping
 - ultra fast toolchanges, up to 0.3 seconds
 - visual assisted toolhead offset calibration
 - built in z-offset probe support
-<!-- - **NEW!** - IDEX ***spool mode***, infinite spool feature  
-- **NEW!** - IDEX ***mixed mode***, inversed multicolor prints in copy and mirror mode  
-- **NEW!** - IDEX ***free mode***, soon  -->
 
 # V-Core IDEX toolchange video
 [![V-Core IDEX Toolchange](https://img.youtube.com/vi/lKBVmPfxjEk/maxresdefault.jpg)](https://youtu.be/lKBVmPfxjEk)
@@ -52,6 +50,13 @@ managed_services:
 	klipper
 ```
 - reboot, not your laptop
+
+# Inverted Hybrid CoreXY Kinematics
+add this to your printer.cfg
+```ini
+[hybrid_corexy]
+inverted: true
+```
 
 # IDEX modes
 - by default the printer will be in single toolhead mode.

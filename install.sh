@@ -93,8 +93,6 @@ function link_klippy_kinematics {
     if [ -d "${KLIPPY_KINEMATICS}" ]; then
         rm -f "${KLIPPY_KINEMATICS}/hybrid_corexy.py"
         ln -sf "${SRCDIR}/klippy/kinematics/hybrid_corexy.py" "${KLIPPY_KINEMATICS}/hybrid_corexy.py"
-        rm -f "${KLIPPY_KINEMATICS}/idex_modes.py"
-        ln -sf "${SRCDIR}/klippy/kinematics/idex_modes.py" "${KLIPPY_KINEMATICS}/idex_modes.py"
     else
         echo -e "ERROR: ${KLIPPY_KINEMATICS} not found."
         exit 1
