@@ -47,7 +47,7 @@ cd ~
 git clone https://github.com/HelgeKeck/mainsail.git mainsail-source
 cd ~/mainsail-source
 npm install
-git checkout nozzle-offset-calibration
+git checkout idex
 ```
 
 build distribution
