@@ -1,8 +1,11 @@
 # V-Core IDEX for RatOS 2.X
 
 THIS ISNT A TUTORIAL OR A DOCUMENTATION!
+
 THIS IS MY PRIVATE CONFIGURATION I SHARE!
+
 YOU SHOULD KNOW HOW KLIPPER WORKS BEFORE TOUCHING THIS!
+
 
 This is a unofficial and temporary RatOS V2.X IDEX Implementation. Consider it as beta or alpha. 
 Macros are based on [Mikkel Schmidt`s](https://github.com/miklschmidt) work and have been modified and extended by [Helge Keck](https://github.com/HelgeKeck).
