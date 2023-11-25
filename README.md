@@ -37,6 +37,7 @@ Macros are based on [Mikkel Schmidt`s](https://github.com/miklschmidt) work and 
 - place the `X` and `DUAL_CARRIAGE` endstop stoppers as much outside as possible, to their max positions where they still work
 - tune the `X` and `DUAL_CARRIAGE` `endstop_position` values to its correct positions 
 - your toolhead offsets should be less than 1mm
+- if T1 is primary, make sure T0 has a positive x offset, and reverse
 
 # Install RatOS IDEX
 - install RatOS for V-Core 3
