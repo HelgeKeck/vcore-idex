@@ -1,7 +1,12 @@
-# V-Core IDEX for RatOS 2.X
+V# V-Core IDEX for RatOS 2.X
 This is a unofficial and temporary RatOS V2.X IDEX Implementation. Consider it as beta or alpha. 
 Macros are based on [Mikkel Schmidt`s](https://github.com/miklschmidt) work and have been modified and extended by [Helge Keck](https://github.com/HelgeKeck).
 
+# PLEASE NOTE NEW VAOC MAINSAIL SOURCE CODE CHANGES!
+- merged with latest mainsail version
+- works only with the new RatOS Development Branch for the upcoming RatOS 2.1 version
+
+# Features
 - RatOS macro compatibility 
 - V-Core IDEX Mainsail
 - octopus v1.1 idex board configuration 
