@@ -75,7 +75,7 @@ def process_gcodefile(args, sourcefile):
                 for s in range(len(split)):
                     if split[s].lower().startswith("x"):
                         try:
-                            x = float(split[1].lower().replace("x", ""))
+                            x = float(split[s].lower().replace("x", ""))
                             if x < min_x:
                                 min_x = x
                             if x > max_x:
